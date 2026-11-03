@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#160e14" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Chùa An Tâm" />
+<title>Chùa An Tâm Online · Bản mẫu TikTok LIVE</title>
+<style>
+:root{color-scheme:dark;--gold:#f5cd83;--cream:#fff0ce;--ink:#170d15;--muted:#cbb9bd;--accent:#e9b968}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#100d13;color:#f8eddf;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+body{background:radial-gradient(ellipse at 35% 5%,#35212b 0,transparent 50%),#110e14}.workbench{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:24px;padding:18px 16px 42px}
+.stage{isolation:isolate;container-type:inline-size;position:relative;overflow:hidden;flex:none;width:min(100%,430px,calc(94dvh * 9/16));aspect-ratio:9/16;background:#24121b;border:1px solid #79512f;border-radius:14px;box-shadow:0 28px 85px #000a}
+.stage::after{content:"";pointer-events:none;position:absolute;inset:0;background:linear-gradient(180deg,#110e1890 0%,transparent 13%,transparent 56%,#170d14bf 90%,#120b13e8 100%);z-index:2}
+.scene{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.twinkle{position:absolute;inset:0;pointer-events:none;z-index:1;background-image:radial-gradient(circle,#fff4c2dd 1px,transparent 1.6px),radial-gradient(circle,#f6cd78a9 1px,transparent 1.5px);background-size:67px 95px,87px 79px;background-position:11px 16px,44px 39px;opacity:.45;animation:glint 8s ease-in-out infinite alternate}
+@keyframes glint{to{opacity:.1;transform:translateY(-7px)}}
+.layer{position:absolute;z-index:3}.top{top:2.3%;left:4.7%;right:4.7%;display:flex;align-items:center;gap:2.3cqw}
+.brand-logo{display:grid;place-items:center;aspect-ratio:1;flex:none;width:11cqw;border-radius:50%;background:radial-gradient(circle,#aa682d,#4c241d 68%,#201011);box-shadow:inset 0 0 0 1px #f4d4928c,0 0 15px #d0964c4b;font-size:5cqw}
+.brand-title{font-family:Georgia,"Times New Roman",serif;font-size:5cqw;line-height:1.03;font-weight:800;letter-spacing:.05em;color:#ffe5ab;text-shadow:0 2px 10px #000}
+.brand-subtitle{font-size:2.3cqw;color:#edcd99;letter-spacing:.15em;margin-top:.9cqw;text-transform:uppercase}
+.live-pill{margin-left:auto;flex:none;font-size:2.3cqw;background:#b92c3a;border:1px solid #ff8a89;border-radius:5px;padding:1.15cqw 1.6cqw;font-weight:800;letter-spacing:.05em}
+.stats{top:10%;left:5%;right:5%;height:5.4%;display:flex;gap:1.6cqw;justify-content:space-between;align-items:center}
+.stat{display:flex;align-items:center;justify-content:center;gap:1.3cqw;flex:1;min-width:0;min-height:100%;padding:1cqw 1.5cqw;background:#25161ac9;border:1px solid #b58751aa;border-radius:200px;box-shadow:inset 0 0 15px #5e2d2140;font-size:2.9cqw;white-space:nowrap}
+.stat b{font-size:3.2cqw;color:#fff5e0}.green-dot{width:2.4cqw;height:2.4cqw;background:#3ae184;border-radius:50%;box-shadow:0 0 8px #36eb80}
+.info-tab{top:17%;left:5.2%;max-width:43%;background:#190e14bf;border:1px solid #d5a7656b;border-radius:2cqw;padding:1.6cqw 2cqw;font-size:2.45cqw;line-height:1.45;color:#ffefcd}
+.info-tab b{color:#ffdb91}.leaderboard{top:22%;right:5%;width:36%;background:linear-gradient(155deg,#321b1bf0,#1b1118f0);border:1px solid #e1ac608e;border-radius:2.3cqw;padding:2.1cqw 2.3cqw;box-shadow:0 4px 24px #10020da8}
+.leaderboard h3{margin:0 0 1.4cqw;font-family:Georgia,serif;color:#f7d394;font-size:3.2cqw;text-align:center;font-weight:700}
+.rank-list{list-style:none;margin:0;padding:0;display:grid;gap:.6cqw}
+.rank-list li{display:flex;align-items:center;gap:1cqw;min-width:0;color:#f8e7cb;font-size:2.45cqw}
+.rank-list .rank-num{color:#e1b86e;width:2.2cqw;flex:none}.rank-list .rank-name{flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.rank-list .rank-score{color:#f5c978;font-variant-numeric:tabular-nums}
+.stage-caption{top:40%;left:6%;font-size:2.25cqw;color:#ead1a4;text-shadow:0 1px 5px #000;letter-spacing:.04em}
+.wish-card{top:43.2%;left:5.8%;right:5.8%;height:16.4%;background:linear-gradient(135deg,#612b20f1,#3a1714f5 55%,#54291cfa);border:2px solid #e4b36f;border-radius:3.4cqw;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2.3cqw 3cqw;box-shadow:inset 0 0 0 1px #f0c78c55,0 0 23px #20090292}
+.wish-label{font-family:Georgia,serif;color:#f6d99e;font-size:3.6cqw;line-height:1.3;font-weight:700;margin-bottom:1.2cqw}
+.wish-name{color:#ffdba2;font-size:2.6cqw;margin-bottom:1.2cqw;max-width:100%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.wish-text{font-family:Georgia,"Times New Roman",serif;font-size:3.1cqw;line-height:1.38;font-style:italic;color:#fff2da;max-width:100%;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.people-title{position:absolute;top:61.1%;left:5.5%;right:5.5%;z-index:4;display:flex;align-items:center;justify-content:space-between;color:#f4d69f;font-size:2.55cqw;text-shadow:0 1px 6px #000}.people-title .little{color:#ead8b1;font-size:2.2cqw}
+.people{position:absolute;top:65%;left:4.4%;right:4.4%;bottom:5.2%;z-index:3;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(5,minmax(0,1fr));gap:.2cqw 1cqw;align-items:center;justify-items:center}
+.seat{width:100%;height:100%;position:relative;display:flex;align-items:center;flex-direction:column;justify-content:flex-end}
+.seat-name{position:absolute;top:0;max-width:102%;z-index:2;border:1px solid #b58c568b;padding:.25cqw 1cqw;border-radius:100px;background:#1b1318da;font-size:2.1cqw;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#f6e8d2;box-shadow:0 1px 5px #0004}
+.seat:hover .seat-name{max-width:140%;z-index:7}.human{position:relative;width:8cqw;height:7.7cqw;filter:drop-shadow(0 3px 2px #0008)}.head{position:absolute;width:2.7cqw;height:2.7cqw;border-radius:50%;background:radial-gradient(circle at 37% 30%,#ffd8ab,#a98068 80%);left:2.7cqw;top:0;box-shadow:0 0 4px #fff3cf7d}.robe{position:absolute;top:2.35cqw;left:1.5cqw;width:5.2cqw;height:4.1cqw;background:linear-gradient(100deg,#75829b,#bac0d0 45%,#65718c);border-radius:48% 48% 28% 28%;transform:skewX(-5deg)}.legs{position:absolute;top:5cqw;width:8cqw;height:2.45cqw;border-radius:50%;background:linear-gradient(#afb5c5,#66718b);box-shadow:inset 0 1px 2px #ddd9}.seat-base{height:1.1cqw;width:10cqw;border-radius:50%;background:radial-gradient(ellipse,#cf9d6d 20%,#62422c 60%,#22151d 76%);box-shadow:0 0 0 1px #dd9f5e5c,0 1px 7px #000}.seat.highlight .seat-base{box-shadow:0 0 0 1px #e8bb71,0 0 12px #ffd47b}.seat.highlight .seat-name{color:#ffe29d;border-color:#ffd58e}
+.marquee{left:4.4%;right:4.4%;bottom:1.6%;min-height:3.8%;border-radius:100px;z-index:5;display:flex;align-items:center;justify-content:center;text-align:center;background:#27131bcc;border:1px solid #a67d4b77;padding:.8cqw 2cqw;color:#ffe8bf;font-size:2.45cqw;box-shadow:0 3px 15px #0008}
+.demo-mark{position:absolute;z-index:7;top:0;left:50%;transform:translateX(-50%);background:#342120df;color:#fde4ba;border:1px solid #dba8687d;border-top:0;border-radius:0 0 1cqw 1cqw;padding:.45cqw 2cqw;font-size:1.75cqw;white-space:nowrap;letter-spacing:.12em}
+.fx-layer{position:absolute;inset:0;z-index:6;overflow:hidden;pointer-events:none}.petal{position:absolute;top:-5%;left:var(--left);font-size:var(--size);animation:fall var(--dur) linear forwards;filter:drop-shadow(0 0 7px #f4c0b2)}@keyframes fall{0%{transform:translate3d(0,-5%,0) rotate(0);opacity:0}10%{opacity:1}100%{transform:translate3d(var(--drift),800px,0) rotate(420deg);opacity:0}}
+.toast{position:absolute;left:7%;right:7%;top:35%;z-index:8;border:1px solid #f2d194;background:#3d201ceb;box-shadow:0 0 28px #f3b35d81;text-align:center;border-radius:18px;padding:3cqw;font-weight:700;font-size:3.1cqw;opacity:0;transform:translateY(15px);pointer-events:none;transition:opacity .3s,transform .3s}.toast.show{opacity:1;transform:translateY(0)}
+.panel{width:min(100%,346px);color:#f5e9e0}.panel h1{font-size:22px;line-height:1.2;margin:2px 0 8px;font-family:Georgia,serif;color:#f2d092}.panel p{font-size:13px;color:#cbbdc0;line-height:1.5;margin:0 0 15px}.panel-card{border-radius:14px;background:#251922;border:1px solid #634237;padding:16px;margin:0 0 13px;box-shadow:0 5px 22px #0004}.panel-card h2{font-size:14px;font-weight:700;color:#f4cb88;margin:0 0 12px;letter-spacing:.03em}.field{margin:0 0 11px}.field label{display:block;font-size:12px;color:#ebcda8;margin:0 0 6px}.field input,.field textarea{width:100%;border:1px solid #74564c;background:#151017;color:#fff7e7;border-radius:9px;font:inherit;font-size:13px;padding:11px 12px;outline:none}.field textarea{resize:vertical;min-height:78px}.field input:focus,.field textarea:focus{border-color:#f4c27f;box-shadow:0 0 0 2px #d49a553b}.buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px}.btn{cursor:pointer;border:1px solid #96704d;background:#573121;color:#fff1d4;padding:10px;border-radius:10px;font-size:12.5px;font-weight:700;transition:transform .15s,background .15s}.btn:hover{transform:translateY(-1px);background:#73442a}.btn:active{transform:scale(.98)}.btn.primary{background:#b67d3b;border-color:#eac286;color:#21100b}.btn.secondary{background:#31232b;border-color:#715457}.btn.wide{grid-column:1/-1}.panel-note{font-size:12px;color:#cbb7ba;line-height:1.6;margin-top:12px}.status{font-size:12px;color:#ead0a6;margin-top:9px;min-height:18px}.code{padding:9px 10px;background:#100b11;border:1px solid #684531;border-radius:8px;color:#f4cf95;word-break:break-word;font-size:12px;font-family:monospace}.switch{display:flex;align-items:center;gap:9px;font-size:13px;color:#f1dfd0;cursor:pointer}.switch input{accent-color:#dcab68;width:16px;height:16px}.foot{font-size:12px;color:#c6afaa;line-height:1.5}.foot a{color:#f4cc8b}.divider{height:1px;background:#634237;margin:13px 0}
+.live-mode .workbench{padding:0;margin:0;min-height:100dvh;align-items:center}.live-mode .stage{width:min(100vw,56.25dvh);max-width:none;border:none;border-radius:0;box-shadow:none}.live-mode .panel{display:none}.live-mode .demo-mark{display:block}
+@media(max-width:750px){.workbench{gap:16px;padding:10px 8px 28px}.stage{width:min(100%,420px,calc(87dvh*9/16));border-radius:8px}.panel{width:min(100%,420px)}.panel h1{font-size:20px}.panel-card{padding:13px}}
+</style>
+</head>
+<body>
+<main class="workbench">
+<section class="stage" id="stage" aria-label="Giao diện chùa ảo để phát TikTok LIVE">
+  <svg class="scene" viewBox="0 0 400 711" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <radialGradient id="hall" cx="50%" cy="33%" r="73%"><stop stop-color="#7d4833"/><stop offset=".42" stop-color="#4d271f"/><stop offset="1" stop-color="#180f18"/></radialGradient>
+      <radialGradient id="halo"><stop stop-color="#fff2ac" stop-opacity=".92"/><stop offset=".5" stop-color="#e4a85b" stop-opacity=".42"/><stop offset="1" stop-color="#c56c3e" stop-opacity="0"/></radialGradient>
+      <linearGradient id="wood" x1="0" x2="1"><stop stop-color="#38131a"/><stop offset=".38" stop-color="#9d5232"/><stop offset=".55" stop-color="#b06a3c"/><stop offset="1" stop-color="#381a1a"/></linearGradient>
+      <linearGradient id="robe" x1="0" x2="1" y1=".2" y2="1"><stop stop-color="#a75d19"/><stop offset=".4" stop-color="#f8d38b"/><stop offset=".8" stop-color="#ba6d28"/><stop offset="1" stop-color="#8d4319"/></linearGradient>
+      <linearGradient id="lotus" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#fff3b0"/><stop offset=".6" stop-color="#db963f"/><stop offset="1" stop-color="#793c1a"/></linearGradient>
+      <pattern id="brick" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M0 0h34v34H0z" fill="none" stroke="#d8a76b" opacity=".10"/><path d="M17 0v18M0 18h34" fill="none" stroke="#e7bb86" opacity=".07"/></pattern>
+      <filter id="blur"><feGaussianBlur stdDeviation="10"/></filter>
+      <filter id="softglow"><feGaussianBlur stdDeviation="5"/></filter>
+    </defs>
+    <rect width="400" height="711" fill="url(#hall)"/>
+    <rect width="400" height="711" fill="url(#brick)"/>
+    <path d="M0 95Q200-55 400 95V0H0Z" fill="#210e14" stroke="#a16d38" stroke-width="4"/>
+    <path d="M10 150Q200 7 390 150L390 160Q200 28 10 160Z" fill="#472318" stroke="#c09254" stroke-width="2" opacity=".8"/>
+    <path d="M48 145Q200 25 352 145" fill="none" stroke="#f0ba6b" stroke-width="2" opacity=".7"/>
+    <path d="M70 165Q200 69 330 165" fill="none" stroke="#8e542f" stroke-width="9" opacity=".85"/>
+    <g opacity=".83"><rect x="0" y="62" width="24" height="582" fill="url(#wood)"/><rect x="376" y="62" width="24" height="582" fill="url(#wood)"/>
+    <path d="M0 225h39v12H0zm361 0h39v12h-39zM0 440h38v15H0zm362 0h38v15h-38z" fill="#d0924a" opacity=".56"/>
+    <path d="M33 153v385M367 153v385" stroke="#d7a161" stroke-width="3" opacity=".5"/></g>
+    <path d="M0 445L400 445V711H0Z" fill="#2e1a20"/>
+    <path d="M0 445H400M0 525H400M0 603H400" stroke="#8b5533" stroke-width="2" opacity=".65"/>
+    <path d="M200 445L60 711M200 445L340 711M200 445L150 711M200 445L250 711" stroke="#a46949" opacity=".33" stroke-width="2"/>
+    <circle cx="200" cy="245" r="155" fill="url(#halo)" opacity=".95"/>
+    <circle cx="200" cy="245" r="93" fill="none" stroke="#f0b65b" stroke-opacity=".30" stroke-width="2"/>
+    <circle cx="200" cy="245" r="105" fill="none" stroke="#f0b65b" stroke-opacity=".17" stroke-width="7"/>
+    <g transform="translate(0 20)">
+      <ellipse cx="200" cy="389" rx="95" ry="16" fill="#e6a449" opacity=".4" filter="url(#softglow)"/>
+      <path d="M110 374Q200 365 290 374L273 390H127Z" fill="#ad5a27" stroke="#ffc778" stroke-width="3"/>
+      <path d="M130 360Q150 354 200 358Q255 354 270 360L263 377Q200 385 137 377Z" fill="#6d331a" stroke="#d9a15d" stroke-width="2"/>
+      <path d="M200 205c-15 0-26 12-26 28v15c0 14 12 27 26 27s26-13 26-27v-15c0-16-11-28-26-28Z" fill="url(#robe)" stroke="#7c3b1c" stroke-width="2"/>
+      <ellipse cx="200" cy="208" rx="15" ry="15" fill="#b26d2b" stroke="#e6b86c" stroke-width="2"/>
+      <path d="M181 238q8-6 15-2m8 0q8-4 15 2" fill="none" stroke="#6b3c20" stroke-width="2"/>
+      <path d="M193 254q7 6 14 0" fill="none" stroke="#6e3a1f" stroke-width="2" stroke-linecap="round"/>
+      <path d="M180 260Q156 266 148 302L129 338Q124 351 145 352L168 326L165 350Q200 371 235 350L232 326L255 352Q276 351 271 338L252 302Q244 266 220 260L200 281Z" fill="url(#robe)" stroke="#79401f" stroke-width="3"/>
+      <path d="M178 266Q184 296 165 344M222 268Q216 300 235 347" stroke="#fff0a4" stroke-width="3" fill="none" opacity=".65"/>
+      <path d="M171 320Q144 317 123 345Q113 361 143 365L195 359Q205 361 257 365Q287 361 277 345Q256 317 229 320L205 338Z" fill="url(#robe)" stroke="#7b431e" stroke-width="2"/>
+      <path d="M179 337q19 5 21 4 8-2 19-4M177 345q23 12 46 0" stroke="#5f361d" stroke-width="2" fill="none"/>
+      <ellipse cx="189" cy="337" rx="12" ry="5" fill="#f9d384"/><ellipse cx="211" cy="337" rx="12" ry="5" fill="#e9bd70"/>
+      <g fill="url(#lotus)" stroke="#87431d" stroke-width="1.8">
+        <path d="M200 378q-22-28 0-45 22 17 0 45Z"/>
+        <path d="M200 380q-50-22-35-44 25 3 35 44Z"/><path d="M200 380q50-22 35-44-25 3-35 44Z"/>
+        <path d="M198 381q-65-5-60-25 32-5 60 25Z"/><path d="M202 381q65-5 60-25-32-5-60 25Z"/>
+        <path d="M194 384q-71 7-73-10 28-17 73 10Z"/><path d="M206 384q71 7 73-10-28-17-73 10Z"/>
+      </g>
+    </g>
+    <g opacity=".9"><path d="M61 315v74m278-74v74" stroke="#d0a15a" stroke-width="2"/><path d="M47 339q14-20 28 0l-8 28H55Z" fill="#eab36e" opacity=".7"/><path d="M325 339q14-20 28 0l-8 28h-12Z" fill="#eab36e" opacity=".7"/></g>
+    <g fill="#edb35d" opacity=".45" filter="url(#blur)"><circle cx="44" cy="371" r="32"/><circle cx="357" cy="371" r="32"/></g>
+  </svg>
+  <div class="twinkle"></div>
+  <div class="demo-mark">BẢN MẪU · CHƯA KẾT NỐI TIKTOK</div>
+  <div class="layer top">
+     <div class="brand-logo">🪷</div><div><div class="brand-title">CHÙA AN TÂM</div><div class="brand-subtitle">BÌNH AN TRONG TỪNG KHOẢNH KHẮC</div></div><div class="live-pill">LIVE DEMO</div>
+  </div>
+  <div class="layer stats"><div class="stat"><i class="green-dot"></i><b id="onlineCount">25</b> đồng hành</div><div class="stat">🪷 <b id="flowersCount">0</b> hoa</div><div class="stat">◷ <b id="timer">00:00:00</b></div></div>
+  <div class="layer info-tab"><b>✨ Không gian an yên</b><br/>Bình luận “AN” để tham gia<br/>Gửi lời chúc tốt lành cho mọi người</div>
+  <div class="layer leaderboard"><h3>🌸 Đồng hành</h3><ol class="rank-list" id="ranking"></ol></div>
+  <div class="layer stage-caption">🕯️ Một phút lắng lòng · Một ngày bình an</div>
+  <div class="layer wish-card"><div class="wish-label">Lời chúc bình an hôm nay</div><div class="wish-name" id="wishName">🪷 Gửi tới tất cả mọi người</div><div class="wish-text" id="wishText">“Mong tâm luôn an yên, mỗi ngày tìm thấy một điều nhỏ bé đáng biết ơn.”</div></div>
+  <div class="people-title"><span>🧘 Không gian thiền định</span><span class="little" id="guestLine">25 vị trí đang hiển thị</span></div>
+  <div class="people" id="people"></div>
+  <div class="marquee" id="ticker">🪷 Chào mừng đến với Chùa An Tâm Online</div>
+  <div class="fx-layer" id="fx"></div><div class="toast" id="toast"></div>
+</section>
+<aside class="panel">
+  <h1>Điều khiển bản mẫu</h1>
+  <p>Đây là trang web minh họa giao diện LIVE tương tác dọc 9:16. Các nút bên dưới dùng để thử hiệu ứng, chưa đọc bình luận hoặc quà tặng thật từ TikTok.</p>
+  <div class="panel-card">
+    <h2>THỬ TƯƠNG TÁC NGƯỜI XEM</h2>
+    <div class="field"><label for="username">Tên người tham gia</label><input id="username" value="Khách An Nhiên" maxlength="24" placeholder="Nhập tên người xem" /></div>
+    <div class="buttons"><button class="btn primary" id="joinBtn">🧘 Tham gia thiền</button><button class="btn" id="heartBtn">❤️ Thả tim</button><button class="btn" id="flowerBtn">🪷 Dâng hoa</button><button class="btn" id="bellBtn">🔔 Thỉnh chuông</button></div>
+  </div>
+  <div class="panel-card">
+    <h2>GỬI LỜI CHÚC TRÊN MÀN HÌNH</h2>
+    <div class="field"><label for="wishInput">Nội dung lời chúc</label><textarea id="wishInput" maxlength="160">Mong mọi người có một ngày nhẹ lòng, khỏe mạnh và hạnh phúc.</textarea></div>
+    <div class="buttons"><button class="btn primary wide" id="wishBtn">Hiện lời chúc</button></div>
+  </div>
+  <div class="panel-card">
+    <h2>TRÌNH CHIẾU VÀ THỬ NGHIỆM</h2>
+    <label class="switch"><input type="checkbox" id="autoToggle"/> Tự tạo tương tác mô phỏng</label>
+    <div class="divider"></div>
+    <div class="buttons"><button class="btn" id="resetBtn">↺ Đặt lại demo</button><button class="btn" id="previewBtn">⛶ Mở màn hình LIVE</button></div>
+    <p class="panel-note">Mẹo: Dùng <strong>chế độ màn hình LIVE</strong> để kiểm tra giao diện không có bảng điều khiển khi đưa vào phần mềm phát trực tiếp.</p>
+    <div class="code">Mẫu để thử trên OBS: chua_an_tam_demo.html?live=1</div>
+    <div class="status" id="status" role="status">Sẵn sàng thử nghiệm.</div>
+  </div>
+  <div class="foot">Quan trọng: Toàn bộ sự kiện trong bản mẫu là dữ liệu thử. Kết nối với TikTok LIVE cần một lớp tích hợp sự kiện được cấp phép hoặc dịch vụ tương thích và quyền phát LIVE phù hợp. Không nên gắn quà tặng với lời hứa về phước lành hay kết quả tâm linh.</div>
+</aside>
+</main>
+<script>
+(()=>{'use strict';
+ const $=id=>document.getElementById(id);
+ const stage=$('stage'),peopleEl=$('people'),rankEl=$('ranking'),wishName=$('wishName'),wishText=$('wishText'),ticker=$('ticker'),fx=$('fx'),toast=$('toast');
+ const firstNames=['An Nhiên','Thanh Tâm','Hương Sen','Minh Tịnh','Phúc An','Thiện Ý','Bình Tâm','Diệu Linh','Tâm Phúc','Trúc Mai','Ngọc An','Hoài Phương','Như Ý','Phúc Hòa','Thảo Nhi','Hải Bình','Từ Tâm','Lan Hương','Minh Hiếu','An Lành','Thanh Trúc','Thủy Tiên','Đức An','Bảo Nhi','Kim Ngân'];
+ const baseWishes=['Mong tâm luôn an yên, mỗi ngày tìm thấy một điều nhỏ bé đáng biết ơn.','Hãy dành một phút cho hơi thở và cho chính mình. Bình an bắt đầu từ những điều giản dị.','Mong gia đình luôn mạnh khỏe, tình thương và sự thấu hiểu luôn hiện diện.','Chúc một ngày mới thuận hòa, làm việc với tâm sáng và nghỉ ngơi thật trọn vẹn.'];
+ let data=[],flowers=0,likes=0,start=Date.now(),autoTimer=null,toastTimer=null,wishCursor=0;
+ function seed(){data=firstNames.map((name,i)=>({name,points:Math.max(1,25-i+Math.floor((25-i)/3)),flowers:0}));flowers=0;likes=0;start=Date.now();wishCursor=0;wishName.textContent='🪷 Gửi tới tất cả mọi người';wishText.textContent='“'+baseWishes[0]+'”';ticker.textContent='🪷 Chào mừng đến với Chùa An Tâm Online';render()}
+ function cleaned(s){return String(s||'').trim().replace(/\s+/g,' ').slice(0,24)}
+ function name(){return cleaned($('username').value)||'Khách An Nhiên'}
+ function findUser(n){let u=data.find(x=>x.name.toLowerCase()===n.toLowerCase());if(!u){u={name:n,points:0,flowers:0};data.push(u)}return u}
+ function render(){
+   $('onlineCount').textContent=data.length;$('flowersCount').textContent=flowers.toLocaleString('vi-VN');$('guestLine').textContent=`${Math.min(25,data.length)} vị trí đang hiển thị`;
+   rankEl.replaceChildren();[...data].sort((a,b)=>b.points-a.points).slice(0,8).forEach((p,i)=>{let li=document.createElement('li');for(const [cls,t] of [['rank-num',String(i+1)+'.'],['rank-name',p.name],['rank-score',String(p.points)]]){let span=document.createElement('span');span.className=cls;span.textContent=t;li.appendChild(span)}rankEl.appendChild(li)});
+   peopleEl.replaceChildren();data.slice(-25).forEach(p=>{const seat=document.createElement('div');seat.className='seat'+(p.points>45?' highlight':'');seat.title=p.name;
+     const tag=document.createElement('span');tag.className='seat-name';tag.textContent=p.name;
+     const human=document.createElement('span');human.className='human';human.innerHTML='<i class="head"></i><i class="robe"></i><i class="legs"></i>';
+     const base=document.createElement('span');base.className='seat-base';seat.append(tag,human,base);peopleEl.appendChild(seat)
+   });
+ }
+ function notify(text){toast.textContent=text;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2200)}
+ function announce(s){ticker.textContent=s;$('status').textContent=s}
+ function petals(n=12){const icons=['🪷','🌸','✨'];for(let i=0;i<n;i++){let p=document.createElement('span');p.className='petal';p.textContent=icons[Math.floor(Math.random()*icons.length)];p.style.setProperty('--left',(4+Math.random()*92)+'%');p.style.setProperty('--size',(12+Math.random()*12)+'px');p.style.setProperty('--dur',(3+Math.random()*3)+'s');p.style.setProperty('--drift',(Math.random()*120-60)+'px');fx.appendChild(p);setTimeout(()=>p.remove(),6500)}}
+ function action(kind,user=name(),word=''){
+   const p=findUser(cleaned(user)||'Khách An Nhiên');
+   if(kind==='join'){p.points+=1;announce('🧘 '+p.name+' vừa tham gia không gian thiền định');notify('Chào mừng '+p.name)}
+   if(kind==='heart'){p.points+=1;likes++;announce('❤️ '+p.name+' đã gửi một lời động viên');if(likes%3===0)petals(4)}
+   if(kind==='flower'){p.points+=10;p.flowers++;flowers++;announce('🪷 '+p.name+' vừa dâng một đóa hoa tượng trưng');notify('🪷 Cảm ơn '+p.name);petals(16)}
+   if(kind==='wish'){p.points+=2;wishName.textContent='🪷 Lời chúc từ '+p.name;wishText.textContent='“'+(String(word||'').trim().slice(0,160)||baseWishes[1])+'”';announce('💌 '+p.name+' vừa gửi lời chúc bình an');notify('Lời chúc đã xuất hiện');petals(7)}
+   render();
+ }
+ function sound(){try{const AudioCtx=window.AudioContext||window.webkitAudioContext;if(!AudioCtx){notify('Trình duyệt không hỗ trợ phát chuông');return}let context=new AudioCtx(),now=context.currentTime;[523.25,783.99,1046.5,1567.98].forEach((hz,i)=>{let o=context.createOscillator(),g=context.createGain();o.type='sine';o.frequency.setValueAtTime(hz,now);g.gain.setValueAtTime(.0001,now);g.gain.exponentialRampToValueAtTime(.11/(i+1),now+.02);g.gain.exponentialRampToValueAtTime(.0001,now+3.5);o.connect(g).connect(context.destination);o.start(now);o.stop(now+3.6)});setTimeout(()=>context.close(),4200)}catch(e){notify('Không thể phát âm thanh trên thiết bị này')}}
+ function time(){let sec=Math.floor((Date.now()-start)/1000),hr=Math.floor(sec/3600),min=Math.floor(sec%3600/60),ss=sec%60;$('timer').textContent=[hr,min,ss].map(v=>String(v).padStart(2,'0')).join(':')}
+ $('joinBtn').addEventListener('click',()=>action('join'));
+ $('heartBtn').addEventListener('click',()=>action('heart'));
+ $('flowerBtn').addEventListener('click',()=>action('flower'));
+ $('bellBtn').addEventListener('click',()=>{sound();notify('🔔 Chuông an yên');announce('🔔 Tiếng chuông nhắc ta trở về với hiện tại')});
+ $('wishBtn').addEventListener('click',()=>action('wish',name(),$('wishInput').value));
+ $('resetBtn').addEventListener('click',()=>{seed();notify('Đã đặt lại bản mẫu')});
+ $('autoToggle').addEventListener('change',e=>{if(autoTimer){clearInterval(autoTimer);autoTimer=null}if(e.target.checked){autoTimer=setInterval(()=>{let who=firstNames[Math.floor(Math.random()*firstNames.length)],type=Math.random()>.73?'flower':(Math.random()>.6?'join':'heart');action(type,who);},3600);announce('Đã bật tương tác mô phỏng')}else announce('Đã tắt tương tác mô phỏng')});
+ $('previewBtn').addEventListener('click',()=>{const u=new URL(location.href);u.searchParams.set('live','1');window.open(u.href,'_blank','noopener')});
+ setInterval(time,1000);setInterval(()=>{wishCursor=(wishCursor+1)%baseWishes.length;wishName.textContent='🪷 Gửi tới tất cả mọi người';wishText.textContent='“'+baseWishes[wishCursor]+'”'},22000);
+ if(new URLSearchParams(location.search).has('live')){document.body.classList.add('live-mode')}
+ seed();time();
+})();
+</script>
+</body>
+</html>
