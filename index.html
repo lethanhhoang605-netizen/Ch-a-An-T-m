@@ -1,192 +1,166 @@
 <!doctype html>
-<html lang="vi">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<meta name="theme-color" content="#160e14" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-<meta name="apple-mobile-web-app-title" content="Chùa An Tâm" />
-<title>Chùa An Tâm Online · Bản mẫu TikTok LIVE</title>
-<style>
-:root{color-scheme:dark;--gold:#f5cd83;--cream:#fff0ce;--ink:#170d15;--muted:#cbb9bd;--accent:#e9b968}
-*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#100d13;color:#f8eddf;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
-body{background:radial-gradient(ellipse at 35% 5%,#35212b 0,transparent 50%),#110e14}.workbench{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:24px;padding:18px 16px 42px}
-.stage{isolation:isolate;container-type:inline-size;position:relative;overflow:hidden;flex:none;width:min(100%,430px,calc(94dvh * 9/16));aspect-ratio:9/16;background:#24121b;border:1px solid #79512f;border-radius:14px;box-shadow:0 28px 85px #000a}
-.stage::after{content:"";pointer-events:none;position:absolute;inset:0;background:linear-gradient(180deg,#110e1890 0%,transparent 13%,transparent 56%,#170d14bf 90%,#120b13e8 100%);z-index:2}
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#24100f"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Chùa An Tâm"><title>Chùa An Tâm · Chánh điện truyền thống (Demo)</title><style>
+:root{color-scheme:dark;--gold:#f1c67c;--cream:#ffe9c6;--panel:#311812;--wine:#4a2118}
+*{box-sizing:border-box}html,body{min-height:100%;margin:0;background:#110c10;color:#fff0d9;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+body{background:radial-gradient(ellipse at 50% -10%,#50301e 0%,#1d1113 56%,#0d0c11 100%)}
+button,input,textarea{font:inherit}
+.workspace{display:flex;flex-wrap:wrap;justify-content:center;gap:26px;align-items:flex-start;padding:18px 14px 50px}
+.stage{position:relative;isolation:isolate;container-type:inline-size;overflow:hidden;flex:none;width:min(100%,450px,calc(93dvh * 9 / 16));aspect-ratio:9/16;border:2px solid #a6773c;border-radius:15px;box-shadow:0 24px 65px #000a;background:#26100f}
 .scene{position:absolute;inset:0;width:100%;height:100%;z-index:0}
-.twinkle{position:absolute;inset:0;pointer-events:none;z-index:1;background-image:radial-gradient(circle,#fff4c2dd 1px,transparent 1.6px),radial-gradient(circle,#f6cd78a9 1px,transparent 1.5px);background-size:67px 95px,87px 79px;background-position:11px 16px,44px 39px;opacity:.45;animation:glint 8s ease-in-out infinite alternate}
-@keyframes glint{to{opacity:.1;transform:translateY(-7px)}}
-.layer{position:absolute;z-index:3}.top{top:2.3%;left:4.7%;right:4.7%;display:flex;align-items:center;gap:2.3cqw}
-.brand-logo{display:grid;place-items:center;aspect-ratio:1;flex:none;width:11cqw;border-radius:50%;background:radial-gradient(circle,#aa682d,#4c241d 68%,#201011);box-shadow:inset 0 0 0 1px #f4d4928c,0 0 15px #d0964c4b;font-size:5cqw}
-.brand-title{font-family:Georgia,"Times New Roman",serif;font-size:5cqw;line-height:1.03;font-weight:800;letter-spacing:.05em;color:#ffe5ab;text-shadow:0 2px 10px #000}
-.brand-subtitle{font-size:2.3cqw;color:#edcd99;letter-spacing:.15em;margin-top:.9cqw;text-transform:uppercase}
-.live-pill{margin-left:auto;flex:none;font-size:2.3cqw;background:#b92c3a;border:1px solid #ff8a89;border-radius:5px;padding:1.15cqw 1.6cqw;font-weight:800;letter-spacing:.05em}
-.stats{top:10%;left:5%;right:5%;height:5.4%;display:flex;gap:1.6cqw;justify-content:space-between;align-items:center}
-.stat{display:flex;align-items:center;justify-content:center;gap:1.3cqw;flex:1;min-width:0;min-height:100%;padding:1cqw 1.5cqw;background:#25161ac9;border:1px solid #b58751aa;border-radius:200px;box-shadow:inset 0 0 15px #5e2d2140;font-size:2.9cqw;white-space:nowrap}
-.stat b{font-size:3.2cqw;color:#fff5e0}.green-dot{width:2.4cqw;height:2.4cqw;background:#3ae184;border-radius:50%;box-shadow:0 0 8px #36eb80}
-.info-tab{top:17%;left:5.2%;max-width:43%;background:#190e14bf;border:1px solid #d5a7656b;border-radius:2cqw;padding:1.6cqw 2cqw;font-size:2.45cqw;line-height:1.45;color:#ffefcd}
-.info-tab b{color:#ffdb91}.leaderboard{top:22%;right:5%;width:36%;background:linear-gradient(155deg,#321b1bf0,#1b1118f0);border:1px solid #e1ac608e;border-radius:2.3cqw;padding:2.1cqw 2.3cqw;box-shadow:0 4px 24px #10020da8}
-.leaderboard h3{margin:0 0 1.4cqw;font-family:Georgia,serif;color:#f7d394;font-size:3.2cqw;text-align:center;font-weight:700}
-.rank-list{list-style:none;margin:0;padding:0;display:grid;gap:.6cqw}
-.rank-list li{display:flex;align-items:center;gap:1cqw;min-width:0;color:#f8e7cb;font-size:2.45cqw}
-.rank-list .rank-num{color:#e1b86e;width:2.2cqw;flex:none}.rank-list .rank-name{flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.rank-list .rank-score{color:#f5c978;font-variant-numeric:tabular-nums}
-.stage-caption{top:40%;left:6%;font-size:2.25cqw;color:#ead1a4;text-shadow:0 1px 5px #000;letter-spacing:.04em}
-.wish-card{top:43.2%;left:5.8%;right:5.8%;height:16.4%;background:linear-gradient(135deg,#612b20f1,#3a1714f5 55%,#54291cfa);border:2px solid #e4b36f;border-radius:3.4cqw;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2.3cqw 3cqw;box-shadow:inset 0 0 0 1px #f0c78c55,0 0 23px #20090292}
-.wish-label{font-family:Georgia,serif;color:#f6d99e;font-size:3.6cqw;line-height:1.3;font-weight:700;margin-bottom:1.2cqw}
-.wish-name{color:#ffdba2;font-size:2.6cqw;margin-bottom:1.2cqw;max-width:100%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
-.wish-text{font-family:Georgia,"Times New Roman",serif;font-size:3.1cqw;line-height:1.38;font-style:italic;color:#fff2da;max-width:100%;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.people-title{position:absolute;top:61.1%;left:5.5%;right:5.5%;z-index:4;display:flex;align-items:center;justify-content:space-between;color:#f4d69f;font-size:2.55cqw;text-shadow:0 1px 6px #000}.people-title .little{color:#ead8b1;font-size:2.2cqw}
-.people{position:absolute;top:65%;left:4.4%;right:4.4%;bottom:5.2%;z-index:3;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(5,minmax(0,1fr));gap:.2cqw 1cqw;align-items:center;justify-items:center}
-.seat{width:100%;height:100%;position:relative;display:flex;align-items:center;flex-direction:column;justify-content:flex-end}
-.seat-name{position:absolute;top:0;max-width:102%;z-index:2;border:1px solid #b58c568b;padding:.25cqw 1cqw;border-radius:100px;background:#1b1318da;font-size:2.1cqw;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#f6e8d2;box-shadow:0 1px 5px #0004}
-.seat:hover .seat-name{max-width:140%;z-index:7}.human{position:relative;width:8cqw;height:7.7cqw;filter:drop-shadow(0 3px 2px #0008)}.head{position:absolute;width:2.7cqw;height:2.7cqw;border-radius:50%;background:radial-gradient(circle at 37% 30%,#ffd8ab,#a98068 80%);left:2.7cqw;top:0;box-shadow:0 0 4px #fff3cf7d}.robe{position:absolute;top:2.35cqw;left:1.5cqw;width:5.2cqw;height:4.1cqw;background:linear-gradient(100deg,#75829b,#bac0d0 45%,#65718c);border-radius:48% 48% 28% 28%;transform:skewX(-5deg)}.legs{position:absolute;top:5cqw;width:8cqw;height:2.45cqw;border-radius:50%;background:linear-gradient(#afb5c5,#66718b);box-shadow:inset 0 1px 2px #ddd9}.seat-base{height:1.1cqw;width:10cqw;border-radius:50%;background:radial-gradient(ellipse,#cf9d6d 20%,#62422c 60%,#22151d 76%);box-shadow:0 0 0 1px #dd9f5e5c,0 1px 7px #000}.seat.highlight .seat-base{box-shadow:0 0 0 1px #e8bb71,0 0 12px #ffd47b}.seat.highlight .seat-name{color:#ffe29d;border-color:#ffd58e}
-.marquee{left:4.4%;right:4.4%;bottom:1.6%;min-height:3.8%;border-radius:100px;z-index:5;display:flex;align-items:center;justify-content:center;text-align:center;background:#27131bcc;border:1px solid #a67d4b77;padding:.8cqw 2cqw;color:#ffe8bf;font-size:2.45cqw;box-shadow:0 3px 15px #0008}
-.demo-mark{position:absolute;z-index:7;top:0;left:50%;transform:translateX(-50%);background:#342120df;color:#fde4ba;border:1px solid #dba8687d;border-top:0;border-radius:0 0 1cqw 1cqw;padding:.45cqw 2cqw;font-size:1.75cqw;white-space:nowrap;letter-spacing:.12em}
-.fx-layer{position:absolute;inset:0;z-index:6;overflow:hidden;pointer-events:none}.petal{position:absolute;top:-5%;left:var(--left);font-size:var(--size);animation:fall var(--dur) linear forwards;filter:drop-shadow(0 0 7px #f4c0b2)}@keyframes fall{0%{transform:translate3d(0,-5%,0) rotate(0);opacity:0}10%{opacity:1}100%{transform:translate3d(var(--drift),800px,0) rotate(420deg);opacity:0}}
-.toast{position:absolute;left:7%;right:7%;top:35%;z-index:8;border:1px solid #f2d194;background:#3d201ceb;box-shadow:0 0 28px #f3b35d81;text-align:center;border-radius:18px;padding:3cqw;font-weight:700;font-size:3.1cqw;opacity:0;transform:translateY(15px);pointer-events:none;transition:opacity .3s,transform .3s}.toast.show{opacity:1;transform:translateY(0)}
-.panel{width:min(100%,346px);color:#f5e9e0}.panel h1{font-size:22px;line-height:1.2;margin:2px 0 8px;font-family:Georgia,serif;color:#f2d092}.panel p{font-size:13px;color:#cbbdc0;line-height:1.5;margin:0 0 15px}.panel-card{border-radius:14px;background:#251922;border:1px solid #634237;padding:16px;margin:0 0 13px;box-shadow:0 5px 22px #0004}.panel-card h2{font-size:14px;font-weight:700;color:#f4cb88;margin:0 0 12px;letter-spacing:.03em}.field{margin:0 0 11px}.field label{display:block;font-size:12px;color:#ebcda8;margin:0 0 6px}.field input,.field textarea{width:100%;border:1px solid #74564c;background:#151017;color:#fff7e7;border-radius:9px;font:inherit;font-size:13px;padding:11px 12px;outline:none}.field textarea{resize:vertical;min-height:78px}.field input:focus,.field textarea:focus{border-color:#f4c27f;box-shadow:0 0 0 2px #d49a553b}.buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px}.btn{cursor:pointer;border:1px solid #96704d;background:#573121;color:#fff1d4;padding:10px;border-radius:10px;font-size:12.5px;font-weight:700;transition:transform .15s,background .15s}.btn:hover{transform:translateY(-1px);background:#73442a}.btn:active{transform:scale(.98)}.btn.primary{background:#b67d3b;border-color:#eac286;color:#21100b}.btn.secondary{background:#31232b;border-color:#715457}.btn.wide{grid-column:1/-1}.panel-note{font-size:12px;color:#cbb7ba;line-height:1.6;margin-top:12px}.status{font-size:12px;color:#ead0a6;margin-top:9px;min-height:18px}.code{padding:9px 10px;background:#100b11;border:1px solid #684531;border-radius:8px;color:#f4cf95;word-break:break-word;font-size:12px;font-family:monospace}.switch{display:flex;align-items:center;gap:9px;font-size:13px;color:#f1dfd0;cursor:pointer}.switch input{accent-color:#dcab68;width:16px;height:16px}.foot{font-size:12px;color:#c6afaa;line-height:1.5}.foot a{color:#f4cc8b}.divider{height:1px;background:#634237;margin:13px 0}
-.live-mode .workbench{padding:0;margin:0;min-height:100dvh;align-items:center}.live-mode .stage{width:min(100vw,56.25dvh);max-width:none;border:none;border-radius:0;box-shadow:none}.live-mode .panel{display:none}.live-mode .demo-mark{display:block}
-@media(max-width:750px){.workbench{gap:16px;padding:10px 8px 28px}.stage{width:min(100%,420px,calc(87dvh*9/16));border-radius:8px}.panel{width:min(100%,420px)}.panel h1{font-size:20px}.panel-card{padding:13px}}
-</style>
-</head>
-<body>
-<main class="workbench">
-<section class="stage" id="stage" aria-label="Giao diện chùa ảo để phát TikTok LIVE">
-  <svg class="scene" viewBox="0 0 400 711" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <defs>
-      <radialGradient id="hall" cx="50%" cy="33%" r="73%"><stop stop-color="#7d4833"/><stop offset=".42" stop-color="#4d271f"/><stop offset="1" stop-color="#180f18"/></radialGradient>
-      <radialGradient id="halo"><stop stop-color="#fff2ac" stop-opacity=".92"/><stop offset=".5" stop-color="#e4a85b" stop-opacity=".42"/><stop offset="1" stop-color="#c56c3e" stop-opacity="0"/></radialGradient>
-      <linearGradient id="wood" x1="0" x2="1"><stop stop-color="#38131a"/><stop offset=".38" stop-color="#9d5232"/><stop offset=".55" stop-color="#b06a3c"/><stop offset="1" stop-color="#381a1a"/></linearGradient>
-      <linearGradient id="robe" x1="0" x2="1" y1=".2" y2="1"><stop stop-color="#a75d19"/><stop offset=".4" stop-color="#f8d38b"/><stop offset=".8" stop-color="#ba6d28"/><stop offset="1" stop-color="#8d4319"/></linearGradient>
-      <linearGradient id="lotus" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#fff3b0"/><stop offset=".6" stop-color="#db963f"/><stop offset="1" stop-color="#793c1a"/></linearGradient>
-      <pattern id="brick" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M0 0h34v34H0z" fill="none" stroke="#d8a76b" opacity=".10"/><path d="M17 0v18M0 18h34" fill="none" stroke="#e7bb86" opacity=".07"/></pattern>
-      <filter id="blur"><feGaussianBlur stdDeviation="10"/></filter>
-      <filter id="softglow"><feGaussianBlur stdDeviation="5"/></filter>
-    </defs>
-    <rect width="400" height="711" fill="url(#hall)"/>
-    <rect width="400" height="711" fill="url(#brick)"/>
-    <path d="M0 95Q200-55 400 95V0H0Z" fill="#210e14" stroke="#a16d38" stroke-width="4"/>
-    <path d="M10 150Q200 7 390 150L390 160Q200 28 10 160Z" fill="#472318" stroke="#c09254" stroke-width="2" opacity=".8"/>
-    <path d="M48 145Q200 25 352 145" fill="none" stroke="#f0ba6b" stroke-width="2" opacity=".7"/>
-    <path d="M70 165Q200 69 330 165" fill="none" stroke="#8e542f" stroke-width="9" opacity=".85"/>
-    <g opacity=".83"><rect x="0" y="62" width="24" height="582" fill="url(#wood)"/><rect x="376" y="62" width="24" height="582" fill="url(#wood)"/>
-    <path d="M0 225h39v12H0zm361 0h39v12h-39zM0 440h38v15H0zm362 0h38v15h-38z" fill="#d0924a" opacity=".56"/>
-    <path d="M33 153v385M367 153v385" stroke="#d7a161" stroke-width="3" opacity=".5"/></g>
-    <path d="M0 445L400 445V711H0Z" fill="#2e1a20"/>
-    <path d="M0 445H400M0 525H400M0 603H400" stroke="#8b5533" stroke-width="2" opacity=".65"/>
-    <path d="M200 445L60 711M200 445L340 711M200 445L150 711M200 445L250 711" stroke="#a46949" opacity=".33" stroke-width="2"/>
-    <circle cx="200" cy="245" r="155" fill="url(#halo)" opacity=".95"/>
-    <circle cx="200" cy="245" r="93" fill="none" stroke="#f0b65b" stroke-opacity=".30" stroke-width="2"/>
-    <circle cx="200" cy="245" r="105" fill="none" stroke="#f0b65b" stroke-opacity=".17" stroke-width="7"/>
-    <g transform="translate(0 20)">
-      <ellipse cx="200" cy="389" rx="95" ry="16" fill="#e6a449" opacity=".4" filter="url(#softglow)"/>
-      <path d="M110 374Q200 365 290 374L273 390H127Z" fill="#ad5a27" stroke="#ffc778" stroke-width="3"/>
-      <path d="M130 360Q150 354 200 358Q255 354 270 360L263 377Q200 385 137 377Z" fill="#6d331a" stroke="#d9a15d" stroke-width="2"/>
-      <path d="M200 205c-15 0-26 12-26 28v15c0 14 12 27 26 27s26-13 26-27v-15c0-16-11-28-26-28Z" fill="url(#robe)" stroke="#7c3b1c" stroke-width="2"/>
-      <ellipse cx="200" cy="208" rx="15" ry="15" fill="#b26d2b" stroke="#e6b86c" stroke-width="2"/>
-      <path d="M181 238q8-6 15-2m8 0q8-4 15 2" fill="none" stroke="#6b3c20" stroke-width="2"/>
-      <path d="M193 254q7 6 14 0" fill="none" stroke="#6e3a1f" stroke-width="2" stroke-linecap="round"/>
-      <path d="M180 260Q156 266 148 302L129 338Q124 351 145 352L168 326L165 350Q200 371 235 350L232 326L255 352Q276 351 271 338L252 302Q244 266 220 260L200 281Z" fill="url(#robe)" stroke="#79401f" stroke-width="3"/>
-      <path d="M178 266Q184 296 165 344M222 268Q216 300 235 347" stroke="#fff0a4" stroke-width="3" fill="none" opacity=".65"/>
-      <path d="M171 320Q144 317 123 345Q113 361 143 365L195 359Q205 361 257 365Q287 361 277 345Q256 317 229 320L205 338Z" fill="url(#robe)" stroke="#7b431e" stroke-width="2"/>
-      <path d="M179 337q19 5 21 4 8-2 19-4M177 345q23 12 46 0" stroke="#5f361d" stroke-width="2" fill="none"/>
-      <ellipse cx="189" cy="337" rx="12" ry="5" fill="#f9d384"/><ellipse cx="211" cy="337" rx="12" ry="5" fill="#e9bd70"/>
-      <g fill="url(#lotus)" stroke="#87431d" stroke-width="1.8">
-        <path d="M200 378q-22-28 0-45 22 17 0 45Z"/>
-        <path d="M200 380q-50-22-35-44 25 3 35 44Z"/><path d="M200 380q50-22 35-44-25 3-35 44Z"/>
-        <path d="M198 381q-65-5-60-25 32-5 60 25Z"/><path d="M202 381q65-5 60-25-32-5-60 25Z"/>
-        <path d="M194 384q-71 7-73-10 28-17 73 10Z"/><path d="M206 384q71 7 73-10-28-17-73 10Z"/>
-      </g>
-    </g>
-    <g opacity=".9"><path d="M61 315v74m278-74v74" stroke="#d0a15a" stroke-width="2"/><path d="M47 339q14-20 28 0l-8 28H55Z" fill="#eab36e" opacity=".7"/><path d="M325 339q14-20 28 0l-8 28h-12Z" fill="#eab36e" opacity=".7"/></g>
-    <g fill="#edb35d" opacity=".45" filter="url(#blur)"><circle cx="44" cy="371" r="32"/><circle cx="357" cy="371" r="32"/></g>
-  </svg>
-  <div class="twinkle"></div>
-  <div class="demo-mark">BẢN MẪU · CHƯA KẾT NỐI TIKTOK</div>
-  <div class="layer top">
-     <div class="brand-logo">🪷</div><div><div class="brand-title">CHÙA AN TÂM</div><div class="brand-subtitle">BÌNH AN TRONG TỪNG KHOẢNH KHẮC</div></div><div class="live-pill">LIVE DEMO</div>
-  </div>
-  <div class="layer stats"><div class="stat"><i class="green-dot"></i><b id="onlineCount">25</b> đồng hành</div><div class="stat">🪷 <b id="flowersCount">0</b> hoa</div><div class="stat">◷ <b id="timer">00:00:00</b></div></div>
-  <div class="layer info-tab"><b>✨ Không gian an yên</b><br/>Bình luận “AN” để tham gia<br/>Gửi lời chúc tốt lành cho mọi người</div>
-  <div class="layer leaderboard"><h3>🌸 Đồng hành</h3><ol class="rank-list" id="ranking"></ol></div>
-  <div class="layer stage-caption">🕯️ Một phút lắng lòng · Một ngày bình an</div>
-  <div class="layer wish-card"><div class="wish-label">Lời chúc bình an hôm nay</div><div class="wish-name" id="wishName">🪷 Gửi tới tất cả mọi người</div><div class="wish-text" id="wishText">“Mong tâm luôn an yên, mỗi ngày tìm thấy một điều nhỏ bé đáng biết ơn.”</div></div>
-  <div class="people-title"><span>🧘 Không gian thiền định</span><span class="little" id="guestLine">25 vị trí đang hiển thị</span></div>
-  <div class="people" id="people"></div>
-  <div class="marquee" id="ticker">🪷 Chào mừng đến với Chùa An Tâm Online</div>
-  <div class="fx-layer" id="fx"></div><div class="toast" id="toast"></div>
+.scene-dim{position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,#150d0bcc 0%,transparent 12%,transparent 38%,#1b0c10ab 60%,#110c11ba 100%);pointer-events:none}
+.scene-shine{position:absolute;z-index:2;pointer-events:none;inset:0;background:radial-gradient(ellipse at 50% 37%,#f2b35821,transparent 43%);animation:shimmer 5.7s ease-in-out infinite alternate}
+@keyframes shimmer{to{opacity:.35}}
+.motes{position:absolute;z-index:2;inset:0;pointer-events:none;background-image:radial-gradient(circle,#ffdaa3 1px,transparent 1.4px),radial-gradient(circle,#ffeaba 1px,transparent 1.4px);background-size:61px 81px,94px 119px;background-position:19px 27px,46px 54px;opacity:.35;animation:mote 11s linear infinite alternate}@keyframes mote{to{transform:translateY(-20px);opacity:.12}}
+.frame{position:absolute;inset:1.1%;border:1px solid #bf8d50aa;border-radius:2cqw;z-index:2;pointer-events:none;box-shadow:inset 0 0 25px #0009}
+.layer{position:absolute;z-index:3}
+.stage-head{top:2.8%;left:4.2%;right:4.2%;height:7.1%;display:flex;align-items:center;gap:2cqw;background:linear-gradient(120deg,#301411f3,#6d391bed 54%,#2d1310f2);border:1px solid #dfa65d;border-radius:2cqw;padding:1.4cqw 2cqw;box-shadow:0 3px 24px #13080bdc,inset 0 0 0 1px #ffe1a542}
+.logo{display:grid;place-items:center;flex:none;width:11cqw;height:11cqw;background:radial-gradient(circle,#7c3e1a,#2d1711);border:1px solid #e9bb6c;border-radius:50%;font-size:5.4cqw;box-shadow:0 0 12px #ffc26154}
+.headcopy{min-width:0;flex:1}.headtitle{font-family:Georgia,"Times New Roman",serif;font-size:5.6cqw;letter-spacing:.025em;line-height:1;color:#ffe4a4;font-weight:800;text-shadow:0 1px 8px #000}.headsub{font-size:2.05cqw;letter-spacing:.14em;line-height:1.35;margin-top:.9cqw;color:#e7c18c;white-space:nowrap}
+.live-tag{flex:none;padding:.95cqw 1.4cqw;border-radius:1.1cqw;background:linear-gradient(#ae2835,#78212d);border:1px solid #ff8d88;color:#fff1e5;font-weight:800;font-size:2.5cqw;white-space:nowrap}
+.demo-tag{position:absolute;z-index:7;top:0;left:50%;transform:translateX(-50%);border:1px solid #ddb170;border-top:0;border-radius:0 0 1.2cqw 1.2cqw;background:#24110fe8;color:#ffe2a4;font-size:1.7cqw;padding:.32cqw 1.7cqw;letter-spacing:.12em;white-space:nowrap}
+.stats{top:11.2%;left:4.3%;right:4.3%;display:flex;gap:1.5cqw;height:5%;align-items:stretch}
+.stat{display:flex;align-items:center;justify-content:center;gap:1.2cqw;flex:1;min-width:0;border:1px solid #daa966a6;border-radius:50px;background:#1d1012d9;box-shadow:inset 0 0 12px #8a4c254a;color:#ffe8c3;font-size:2.85cqw;white-space:nowrap}.stat strong{font-size:3.25cqw;color:#fff6df}.stat .dot{width:2.3cqw;height:2.3cqw;background:#48dc79;border-radius:50%;box-shadow:0 0 10px #55ec82}
+.mantra{top:17.7%;left:20%;right:20%;text-align:center;font-family:Georgia,serif;font-weight:700;letter-spacing:.1em;font-size:3cqw;color:#ffe2a7;text-shadow:0 2px 5px #1c0c0b,0 0 14px #f3b961b5}
+.instructions{top:23.8%;left:4.7%;width:28.5%;padding:2.1cqw 1.8cqw;border-radius:2cqw;border:1px solid #d5a2679e;background:linear-gradient(135deg,#351a15f0,#1e1013e8);color:#fce8ca;box-shadow:0 4px 14px #0007}
+.instructions h3,.rankboard h3{margin:0 0 1.5cqw;font-size:2.75cqw;color:#ffe0a4;line-height:1.15}.instructions p{font-size:2.45cqw;line-height:1.35;margin:0 0 1.2cqw}.instructions small{display:block;padding-top:1cqw;border-top:1px solid #bd94524d;font-size:2.08cqw;line-height:1.35;color:#e7c496}
+.rankboard{top:23.8%;right:4.6%;width:29.5%;background:linear-gradient(135deg,#4b2816f0,#1f1111f4);border:1px solid #dba4589a;border-radius:2cqw;box-shadow:0 5px 16px #0007;padding:2cqw 1.6cqw}.rankboard h3{text-align:center;font-family:Georgia,serif;font-size:3.1cqw}
+.ranklist{list-style:none;margin:0;padding:0;display:grid;gap:.75cqw}.ranklist li{display:flex;align-items:center;gap:.7cqw;font-size:2.4cqw;line-height:1.17}.rankno{width:2cqw;color:#dcb470;flex:none}.rankname{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rankscore{color:#ffd28b;font-variant-numeric:tabular-nums}.rankboard .rank-foot{border-top:1px solid #b9884d63;margin-top:1.5cqw;padding-top:1.1cqw;text-align:center;font-size:2cqw;color:#d6b795}
+.altar-caption{top:49.7%;left:17%;right:17%;text-align:center;color:#f5d49f;font-size:2.65cqw;text-shadow:0 2px 7px #000;letter-spacing:.03em}
+.wish{top:53.3%;left:5%;right:5%;height:14%;background:linear-gradient(140deg,#6c3221f4 0%,#401b18fb 51%,#663020f5 100%);border:2px solid #edbc77;border-radius:3.1cqw;box-shadow:0 6px 21px #10040d9f,inset 0 0 0 1px #f6dda365,inset 0 0 24px #ab512a36;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1.8cqw 3.2cqw}
+.wish .wish-title{font-family:Georgia,serif;color:#ffe0a0;font-size:4cqw;font-weight:800;line-height:1.08}.wish .wish-by{color:#f6c98a;font-size:2.55cqw;margin:1cqw 0;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.wish .wish-body{font-family:Georgia,"Times New Roman",serif;color:#fff0d9;font-size:3.1cqw;font-style:italic;line-height:1.28;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;max-width:100%}
+.rowheading{top:69%;left:5%;right:5%;display:flex;justify-content:space-between;gap:2cqw;align-items:center;font-size:2.6cqw;color:#ffe0ad;text-shadow:0 1px 5px #000}.rowheading small{font-size:2.15cqw;color:#eed6b6}
+.sitters{position:absolute;z-index:3;top:72.8%;left:5%;right:5%;bottom:5%;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(5,minmax(0,1fr));gap:.25cqw .5cqw;align-items:center;justify-items:center}
+.sitter{width:100%;height:100%;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:.1cqw;min-width:0}.sitter-name{position:absolute;top:-.1cqw;left:50%;transform:translateX(-50%);z-index:3;max-width:110%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;background:#211014e9;border:1px solid #d5a56ca6;border-radius:60px;color:#ffeaca;font-size:2.1cqw;line-height:1.4;padding:.25cqw 1cqw;box-shadow:0 2px 5px #0009}.person{position:relative;display:block;width:10cqw;height:7.4cqw;filter:drop-shadow(0 2px 2px #0009)}.person .head{position:absolute;left:3.7cqw;top:0;width:2.65cqw;height:2.75cqw;border-radius:48%;background:radial-gradient(circle at 35% 20%,#e6c9ae,#916c59 80%);border:1px solid #9e806c}.person .torso{position:absolute;top:2.2cqw;left:2.4cqw;width:5.35cqw;height:4.2cqw;background:linear-gradient(100deg,#465366,#b2b9c6 38%,#8996a9 55%,#414c63);border-radius:43% 43% 31% 31%;transform:perspective(30px) rotateX(-8deg)}.person .legs{position:absolute;top:5.25cqw;left:.7cqw;width:8.7cqw;height:2.3cqw;border-radius:60% 60% 45% 45%;background:linear-gradient(90deg,#445064,#bac1d2 39%,#667084 77%,#3a465d);box-shadow:inset 0 1px 2px #e6e6e85c}.person .neckline{position:absolute;top:2.8cqw;left:4.95cqw;height:2.65cqw;border-left:1px solid #dbe3ef8b;transform:rotate(12deg)}.cushion{display:block;width:11.3cqw;height:1.3cqw;background:radial-gradient(ellipse,#e5ad6b 4%,#824421 48%,#351917 75%);border-radius:50%;box-shadow:0 0 0 1px #c18b4c9a}.sitter.highlight .sitter-name{border-color:#ffe5aa;color:#fff3c1}.sitter.highlight .cushion{box-shadow:0 0 0 1px #e6ca7c,0 0 10px #eac777a6}
+.ticker{left:5%;right:5%;bottom:1.3%;min-height:3.2%;display:flex;align-items:center;justify-content:center;padding:.7cqw 2cqw;background:#231013e8;border:1px solid #c6975a9e;border-radius:50px;font-size:2.4cqw;color:#ffe8bb;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fx{position:absolute;inset:0;pointer-events:none;z-index:6}.petal{position:absolute;top:-5%;left:var(--x);font-size:var(--s);animation:fall var(--t) linear forwards;filter:drop-shadow(0 0 5px #f1c4a8)}@keyframes fall{0%{transform:translateY(-30px) rotate(0);opacity:0}15%{opacity:1}100%{transform:translate(var(--d),850px) rotate(360deg);opacity:0}}
+.toast{position:absolute;z-index:9;top:43%;left:10%;right:10%;text-align:center;padding:3cqw;border:1px solid #f1ce90;border-radius:3cqw;background:#472019ef;color:#fff0d4;font-size:3cqw;box-shadow:0 0 27px #ffcc6d7a;opacity:0;transform:translateY(15px);pointer-events:none;transition:opacity .25s,transform .25s}.toast.show{opacity:1;transform:translateY(0)}
+.panel{width:min(100%,350px);color:#f4e5cf}.panel h1{margin:4px 0 8px;font-family:Georgia,serif;font-size:23px;color:#ffdaa0}.panel p{margin:0 0 13px;line-height:1.55;font-size:13px;color:#c9b8b6}.panel-card{border:1px solid #81573a;border-radius:15px;background:#281a1c;padding:15px;margin-bottom:13px;box-shadow:0 5px 20px #0003}.panel-card h2{font-size:13px;letter-spacing:.06em;color:#eac187;margin:0 0 12px}.field{margin:0 0 12px}.field label{display:block;font-size:12px;color:#e9ccae;margin:0 0 6px}.field input,.field textarea{display:block;width:100%;padding:10px 12px;background:#181014;color:#fff3de;border:1px solid #886648;border-radius:9px;outline:none;font-size:14px}.field textarea{min-height:84px;resize:vertical}.field input:focus,.field textarea:focus{border-color:#ffdda0}.controls{display:grid;grid-template-columns:1fr 1fr;gap:8px}.btn{border:1px solid #a37b50;background:#4e291c;color:#fff1d8;border-radius:10px;font-weight:700;font-size:13px;padding:11px 8px;cursor:pointer}.btn:active{transform:scale(.98)}.btn.primary{color:#2a130d;background:#e9b768;border-color:#ffe0a0}.btn.wide{grid-column:1/-1}.smallnote{font-size:12px;color:#c8b6ab;line-height:1.5;margin-top:9px}.switch{display:flex;align-items:center;gap:8px;font-size:13px}.switch input{accent-color:#d8a65d}.status{font-size:12px;color:#e9c187;margin-top:12px;min-height:18px}.foot{color:#bca8a7;font-size:12px;line-height:1.55}.divider{height:1px;background:#704a3b;margin:13px 0}
+.live-mode .workspace{min-height:100dvh;padding:0;align-items:center;gap:0}.live-mode .stage{width:min(100vw,56.25dvh);max-width:none;border:0;border-radius:0;box-shadow:none}.live-mode .panel{display:none}
+@media(max-width:750px){.workspace{padding:9px 8px 30px;gap:17px}.stage{width:min(100%,450px,calc(88dvh*9/16));border-radius:9px}.panel{width:min(100%,450px)}.panel-card{padding:14px}}
+@media(prefers-reduced-motion:reduce){.motes,.scene-shine{animation:none}.petal{animation-duration:.01ms!important}}
+
+.sitter{position:relative;display:block}.sitter-name{top:0}.person{position:absolute;left:50%;top:2.15cqw;transform:translateX(-50%);width:8.8cqw;height:6.25cqw;flex:none}.person .head{left:3.25cqw;top:0;width:2.3cqw;height:2.35cqw}.person .torso{left:1.95cqw;top:1.85cqw;width:4.95cqw;height:3.55cqw}.person .legs{left:.55cqw;top:4.45cqw;width:7.75cqw;height:1.8cqw}.person .neckline{top:2.6cqw;left:4.4cqw;height:1.8cqw}.cushion{position:absolute;left:50%;bottom:0;transform:translateX(-50%);height:1cqw;width:10cqw}
+</style></head><body>
+<main class="workspace"><section class="stage" id="stage" aria-label="Chùa An Tâm, chánh điện ảo phong cách truyền thống">
+<svg class="scene" viewBox="0 0 450 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="backWall" cx="50%" cy="35%" r="80%"><stop stop-color="#aa6835"/><stop offset=".30" stop-color="#663419"/><stop offset=".68" stop-color="#291412"/><stop offset="1" stop-color="#120b0d"/></radialGradient>
+<linearGradient id="woodColumn"><stop stop-color="#190b0b"/><stop offset=".18" stop-color="#5c2317"/><stop offset=".38" stop-color="#ac5529"/><stop offset=".54" stop-color="#d48a42"/><stop offset=".72" stop-color="#74301b"/><stop offset="1" stop-color="#1e0c0c"/></linearGradient>
+<linearGradient id="wallInset"><stop stop-color="#170b0b"/><stop offset=".5" stop-color="#6f341f"/><stop offset="1" stop-color="#1c0d0c"/></linearGradient>
+<linearGradient id="roof"><stop stop-color="#1b0c0c"/><stop offset=".2" stop-color="#6c321e"/><stop offset=".5" stop-color="#a66232"/><stop offset=".8" stop-color="#4b2017"/><stop offset="1" stop-color="#1a0d0e"/></linearGradient>
+<radialGradient id="halo"><stop stop-color="#fff5ba" stop-opacity=".92"/><stop offset=".27" stop-color="#f6c36f" stop-opacity=".58"/><stop offset=".62" stop-color="#eeae50" stop-opacity=".22"/><stop offset="1" stop-color="#d47b31" stop-opacity="0"/></radialGradient>
+<linearGradient id="statueGold" x1=".08" y1="0" x2=".9" y2="1"><stop stop-color="#7b3d0e"/><stop offset=".13" stop-color="#d08929"/><stop offset=".33" stop-color="#ffecab"/><stop offset=".5" stop-color="#f7c96b"/><stop offset=".71" stop-color="#b97020"/><stop offset=".88" stop-color="#ffd88a"/><stop offset="1" stop-color="#7f3912"/></linearGradient>
+<linearGradient id="robeGold"><stop stop-color="#8e3d15"/><stop offset=".22" stop-color="#f6ad3e"/><stop offset=".38" stop-color="#ffe6a3"/><stop offset=".52" stop-color="#b76c20"/><stop offset=".72" stop-color="#ffd579"/><stop offset="1" stop-color="#804016"/></linearGradient>
+<linearGradient id="lotusPetal" x1="0" x2=".6" y1="0" y2="1"><stop stop-color="#fff0b9"/><stop offset=".45" stop-color="#e4a53b"/><stop offset="1" stop-color="#823e16"/></linearGradient>
+<radialGradient id="candleGlow"><stop stop-color="#fff8c9" stop-opacity="1"/><stop offset=".25" stop-color="#fff0b0" stop-opacity=".8"/><stop offset="1" stop-color="#f08d26" stop-opacity="0"/></radialGradient>
+<linearGradient id="floor"><stop stop-color="#5e2919"/><stop offset=".45" stop-color="#321513"/><stop offset="1" stop-color="#120c11"/></linearGradient>
+<linearGradient id="incense"><stop stop-color="#ffe0a3" stop-opacity="0"/><stop offset=".5" stop-color="#ffdfa3" stop-opacity=".6"/><stop offset="1" stop-color="#ffe0a3" stop-opacity="0"/></linearGradient>
+<pattern id="flowerWood" width="54" height="54" patternUnits="userSpaceOnUse"><path d="M27 7q18 20 0 40Q9 27 27 7Z" fill="none" stroke="#bc8242" stroke-opacity=".18" stroke-width="2"/><circle cx="27" cy="27" r="3" fill="#bd7d32" opacity=".2"/></pattern>
+<filter id="softFocus"><feGaussianBlur stdDeviation="12"/></filter><filter id="goldGlow"><feGaussianBlur stdDeviation="4"/></filter>
+</defs>
+<rect width="450" height="800" fill="url(#backWall)"/>
+<rect width="450" height="540" fill="url(#flowerWood)" opacity=".75"/>
+<!-- glowing temple depth and sculpted wall -->
+<path d="M88 110Q225 14 362 110L362 474H88Z" fill="#291310" stroke="#bd8648" stroke-width="4"/>
+<path d="M105 145Q225 53 345 145L345 466H105Z" fill="#713916" opacity=".48" stroke="#e8b462" stroke-width="2"/>
+<path d="M117 171Q225 91 333 171L333 469H117Z" fill="#371b13" stroke="#dda15b" stroke-width="1.5"/>
+<path d="M122 170Q225 87 328 170" fill="none" stroke="#c18d43" stroke-width="13" opacity=".34"/>
+<path d="M133 175Q225 108 317 175" fill="none" stroke="#ffcf79" stroke-width="2" opacity=".48"/>
+<circle cx="225" cy="313" r="168" fill="url(#halo)" opacity=".82"/>
+<circle cx="225" cy="306" r="108" fill="none" stroke="#f2bb59" opacity=".43" stroke-width="2"/>
+<circle cx="225" cy="306" r="118" fill="none" stroke="#d3953f" opacity=".19" stroke-width="10"/>
+<circle cx="225" cy="306" r="128" fill="none" stroke="#ffcc7e" opacity=".12" stroke-width="1"/>
+<!-- lanterns, inner columns -->
+<rect x="62" y="105" width="18" height="360" fill="url(#wallInset)" stroke="#925025" stroke-width="1"/><path d="M71 110v348" stroke="#ecc57b" stroke-opacity=".17"/><rect x="90" y="105" width="18" height="360" fill="url(#wallInset)" stroke="#925025" stroke-width="1"/><path d="M99 110v348" stroke="#ecc57b" stroke-opacity=".17"/><rect x="365" y="105" width="18" height="360" fill="url(#wallInset)" stroke="#925025" stroke-width="1"/><path d="M374 110v348" stroke="#ecc57b" stroke-opacity=".17"/><rect x="392" y="105" width="18" height="360" fill="url(#wallInset)" stroke="#925025" stroke-width="1"/><path d="M401 110v348" stroke="#ecc57b" stroke-opacity=".17"/><path d="M 26 135H 127 M 334 135H 427" stroke="#c48e53" stroke-opacity=".24" stroke-width="2"/><path d="M 26 192H 127 M 334 192H 427" stroke="#c48e53" stroke-opacity=".24" stroke-width="2"/><path d="M 26 250H 127 M 334 250H 427" stroke="#c48e53" stroke-opacity=".24" stroke-width="2"/><path d="M 26 312H 127 M 334 312H 427" stroke="#c48e53" stroke-opacity=".24" stroke-width="2"/><path d="M 26 382H 127 M 334 382H 427" stroke="#c48e53" stroke-opacity=".24" stroke-width="2"/>
+<g><rect x="13" y="80" width="30" height="415" rx="7" fill="url(#woodColumn)" stroke="#5b220f" stroke-width="3"/><rect x="407" y="80" width="30" height="415" rx="7" fill="url(#woodColumn)" stroke="#5b220f" stroke-width="3"/>
+<path d="M7 126q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M423 126q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M7 148q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M423 148q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M7 170q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M423 170q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M7 192q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M423 192q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M7 214q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M423 214q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M7 236q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M423 236q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M7 258q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M423 258q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M7 280q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M423 280q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M7 302q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M423 302q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M7 324q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M423 324q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M7 346q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M423 346q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M7 368q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M423 368q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M7 390q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M423 390q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M7 412q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/><path d="M423 412q7 -8 14 0q-7 8 -14 0Z" fill="#cf903a" opacity=".56"/>
+<path d="M9 130h39v16H9ZM402 130h39v16h-39ZM4 446h49v27H4ZM397 446h49v27h-49Z" fill="url(#roof)" stroke="#deac61" stroke-opacity=".6" stroke-width="2"/></g>
+<path d="M0 0h450v94Q225 32 0 94Z" fill="url(#roof)" stroke="#ad723a" stroke-width="4"/>
+<path d="M0 58Q225 -28 450 58M0 76Q225 -4 450 76" stroke="#e5b36c" stroke-width="4" fill="none" opacity=".56"/>
+<path d="M-20 94Q225 15 470 94" fill="none" stroke="#220d0c" stroke-width="18"/><path d="M0 99Q225 20 450 99" fill="none" stroke="#d69b48" stroke-width="2"/>
+<path d="M0 476H450V800H0Z" fill="url(#floor)"/>
+<path d="M0 510H450" stroke="#d49a59" stroke-opacity=".28" stroke-width="2"/><path d="M0 555H450" stroke="#d49a59" stroke-opacity=".28" stroke-width="2"/><path d="M0 610H450" stroke="#d49a59" stroke-opacity=".28" stroke-width="2"/><path d="M0 672H450" stroke="#d49a59" stroke-opacity=".28" stroke-width="2"/><path d="M0 748H450" stroke="#d49a59" stroke-opacity=".28" stroke-width="2"/><path d="M225 472L-180 800" stroke="#d49a59" stroke-opacity=".20" stroke-width="2"/><path d="M225 472L-50 800" stroke="#d49a59" stroke-opacity=".20" stroke-width="2"/><path d="M225 472L80 800" stroke="#d49a59" stroke-opacity=".20" stroke-width="2"/><path d="M225 472L190 800" stroke="#d49a59" stroke-opacity=".20" stroke-width="2"/><path d="M225 472L260 800" stroke="#d49a59" stroke-opacity=".20" stroke-width="2"/><path d="M225 472L370 800" stroke="#d49a59" stroke-opacity=".20" stroke-width="2"/><path d="M225 472L500 800" stroke="#d49a59" stroke-opacity=".20" stroke-width="2"/><path d="M225 472L630 800" stroke="#d49a59" stroke-opacity=".20" stroke-width="2"/>
+<path d="M0 485h450v15H0z" fill="#7a371c" stroke="#dda260" stroke-width="3"/>
+<ellipse cx="225" cy="471" rx="127" ry="29" fill="#030204" opacity=".45" filter="url(#softFocus)"/>
+<!-- carved altar and cushions -->
+<path d="M132 462Q225 442 318 462L307 492H143Z" fill="url(#roof)" stroke="#e4ad5d" stroke-width="3"/>
+<rect x="145" y="463" width="161" height="26" rx="3" fill="#592212" stroke="#dba055" stroke-width="2"/>
+<path d="M155 468H295M160 480H290" stroke="#ffdb83" stroke-opacity=".43" stroke-width="2"/>
+<!-- Buddha statue drawn in layers for metallic depth -->
+<g stroke-linejoin="round">
+<ellipse cx="225" cy="440" rx="91" ry="22" fill="#f5b64e" opacity=".26" filter="url(#goldGlow)"/>
+<path d="M179 318Q158 327 152 352L138 406Q127 422 157 429L183 423L270 423L298 428Q324 424 313 406L297 352Q293 331 269 318L246 333L225 352L204 332Z" fill="url(#robeGold)" stroke="#7c3b12" stroke-width="3"/>
+<path d="M177 326Q151 351 154 402Q166 414 184 418Q183 377 194 348Z" fill="#b86c26" opacity=".72"/>
+<path d="M268 327Q297 352 297 402Q286 414 272 417Q268 370 253 348Z" fill="#b16b27" opacity=".8"/>
+<path d="M180 353Q199 390 225 396Q258 376 270 351" fill="none" stroke="#ffefb3" stroke-width="3" opacity=".5"/>
+<path d="M187 347Q208 364 223 375Q236 360 255 344M178 371Q201 387 213 391M271 371Q253 390 239 393" fill="none" stroke="#884416" stroke-width="2" opacity=".7"/>
+<path d="M181 397Q154 401 143 417Q144 430 163 431Q185 437 225 428Q270 438 292 432Q310 429 310 418Q291 403 269 396Q250 406 225 408Q200 406 181 397Z" fill="url(#statueGold)" stroke="#8c481b" stroke-width="3"/>
+<path d="M152 419Q187 425 225 418Q272 425 296 419" fill="none" stroke="#fff4bd" opacity=".47" stroke-width="3"/>
+<!-- hands on lap -->
+<path d="M200 393Q215 401 224 402Q239 398 252 394Q252 405 238 413Q223 418 208 410Z" fill="#f0b254" stroke="#9b541d" stroke-width="2"/>
+<path d="M207 398Q223 406 240 398" fill="none" stroke="#fff0b0" stroke-width="2" opacity=".6"/>
+<!-- neck and ears -->
+<path d="M211 318L210 329Q225 340 240 329L239 318Z" fill="url(#statueGold)" stroke="#ad6823" stroke-width="1.5"/>
+<path d="M198 286Q187 280 187 297Q188 316 199 315M252 286Q263 280 263 297Q262 316 251 315" fill="url(#statueGold)" stroke="#83451c" stroke-width="2"/>
+<!-- face -->
+<path d="M200 273Q204 258 225 258Q245 259 250 277L252 301Q246 320 225 323Q204 321 198 302Z" fill="url(#statueGold)" stroke="#9d5520" stroke-width="2.5"/>
+<path d="M205 290Q215 286 220 291M232 290Q237 286 245 289" stroke="#6c3718" stroke-width="2" stroke-linecap="round" fill="none"/>
+<path d="M208 295Q215 298 221 295M231 295Q237 298 243 294" stroke="#87431b" stroke-width="1.6" fill="none"/>
+<path d="M226 293q-3 12 1 13" stroke="#ad6e26" fill="none" stroke-width="1.7"/><path d="M219 310q6 4 13 0" stroke="#87431b" fill="none" stroke-width="1.7"/>
+<circle cx="225" cy="284" r="2" fill="#fff3be"/>
+<!-- hair top, crown bump -->
+<path d="M198 282Q192 259 203 247Q212 237 225 239Q238 236 247 249Q259 264 252 282Q246 272 241 262Q223 270 208 261Z" fill="#aa6e2d" stroke="#754014" stroke-width="2"/>
+<ellipse cx="225" cy="239" rx="12" ry="11" fill="url(#statueGold)" stroke="#834113" stroke-width="2"/>
+<circle cx="202" cy="250" r="3.8" fill="#b57a34" stroke="#7d471f" stroke-width=".7" opacity=".92"/><circle cx="210" cy="250" r="3.8" fill="#b57a34" stroke="#7d471f" stroke-width=".7" opacity=".92"/><circle cx="218" cy="250" r="3.8" fill="#b57a34" stroke="#7d471f" stroke-width=".7" opacity=".92"/><circle cx="226" cy="250" r="3.8" fill="#b57a34" stroke="#7d471f" stroke-width=".7" opacity=".92"/><circle cx="234" cy="250" r="3.8" fill="#b57a34" stroke="#7d471f" stroke-width=".7" opacity=".92"/><circle cx="242" cy="250" r="3.8" fill="#b57a34" stroke="#7d471f" stroke-width=".7" opacity=".92"/><circle cx="205" cy="256" r="3.8" fill="#b57a34" stroke="#7d471f" stroke-width=".7" opacity=".92"/><circle cx="213" cy="256" r="3.8" fill="#b57a34" stroke="#7d471f" stroke-width=".7" opacity=".92"/><circle cx="221" cy="256" r="3.8" fill="#b57a34" stroke="#7d471f" stroke-width=".7" opacity=".92"/><circle cx="229" cy="256" r="3.8" fill="#b57a34" stroke="#7d471f" stroke-width=".7" opacity=".92"/><circle cx="237" cy="256" r="3.8" fill="#b57a34" stroke="#7d471f" stroke-width=".7" opacity=".92"/><circle cx="208" cy="262" r="3.8" fill="#b57a34" stroke="#7d471f" stroke-width=".7" opacity=".92"/><circle cx="216" cy="262" r="3.8" fill="#b57a34" stroke="#7d471f" stroke-width=".7" opacity=".92"/><circle cx="224" cy="262" r="3.8" fill="#b57a34" stroke="#7d471f" stroke-width=".7" opacity=".92"/><circle cx="232" cy="262" r="3.8" fill="#b57a34" stroke="#7d471f" stroke-width=".7" opacity=".92"/></g>
+<!-- elegant lotus seat -->
+<g><path d="M 155.0 446.0 Q 157.0 429.0 164.0 424.0 Q 172.0 432.0 174.0 446.0 Q 164.0 453.0 155.0 446.0Z" fill="url(#lotusPetal)" stroke="#8b3e13" stroke-width="1.3"/><path d="M 166.5 444.8 Q 168.5 427.8 175.5 422.8 Q 183.5 430.8 185.5 444.8 Q 175.5 451.8 166.5 444.8Z" fill="url(#lotusPetal)" stroke="#8b3e13" stroke-width="1.3"/><path d="M 178.0 443.7 Q 180.0 426.7 187.0 421.7 Q 195.0 429.7 197.0 443.7 Q 187.0 450.7 178.0 443.7Z" fill="url(#lotusPetal)" stroke="#8b3e13" stroke-width="1.3"/><path d="M 189.5 442.5 Q 191.5 425.5 198.5 420.5 Q 206.5 428.5 208.5 442.5 Q 198.5 449.5 189.5 442.5Z" fill="url(#lotusPetal)" stroke="#8b3e13" stroke-width="1.3"/><path d="M 201.0 441.3 Q 203.0 424.3 210.0 419.3 Q 218.0 427.3 220.0 441.3 Q 210.0 448.3 201.0 441.3Z" fill="url(#lotusPetal)" stroke="#8b3e13" stroke-width="1.3"/><path d="M 212.5 440.2 Q 214.5 423.2 221.5 418.2 Q 229.5 426.2 231.5 440.2 Q 221.5 447.2 212.5 440.2Z" fill="url(#lotusPetal)" stroke="#8b3e13" stroke-width="1.3"/><path d="M 224.0 439.0 Q 226.0 422.0 233.0 417.0 Q 241.0 425.0 243.0 439.0 Q 233.0 446.0 224.0 439.0Z" fill="url(#lotusPetal)" stroke="#8b3e13" stroke-width="1.3"/><path d="M 235.5 440.2 Q 237.5 423.2 244.5 418.2 Q 252.5 426.2 254.5 440.2 Q 244.5 447.2 235.5 440.2Z" fill="url(#lotusPetal)" stroke="#8b3e13" stroke-width="1.3"/><path d="M 247.0 441.3 Q 249.0 424.3 256.0 419.3 Q 264.0 427.3 266.0 441.3 Q 256.0 448.3 247.0 441.3Z" fill="url(#lotusPetal)" stroke="#8b3e13" stroke-width="1.3"/><path d="M 258.5 442.5 Q 260.5 425.5 267.5 420.5 Q 275.5 428.5 277.5 442.5 Q 267.5 449.5 258.5 442.5Z" fill="url(#lotusPetal)" stroke="#8b3e13" stroke-width="1.3"/><path d="M 270.0 443.7 Q 272.0 426.7 279.0 421.7 Q 287.0 429.7 289.0 443.7 Q 279.0 450.7 270.0 443.7Z" fill="url(#lotusPetal)" stroke="#8b3e13" stroke-width="1.3"/><path d="M 281.5 444.8 Q 283.5 427.8 290.5 422.8 Q 298.5 430.8 300.5 444.8 Q 290.5 451.8 281.5 444.8Z" fill="url(#lotusPetal)" stroke="#8b3e13" stroke-width="1.3"/><path d="M 293.0 446.0 Q 295.0 429.0 302.0 424.0 Q 310.0 432.0 312.0 446.0 Q 302.0 453.0 293.0 446.0Z" fill="url(#lotusPetal)" stroke="#8b3e13" stroke-width="1.3"/><ellipse cx="225" cy="445" rx="91" ry="12" fill="#9e4a1b" stroke="#ffd48c" stroke-width="3"/><ellipse cx="225" cy="442" rx="78" ry="7" fill="#f8c36a" opacity=".7"/><path d="M146 445Q225 462 305 445L294 466Q225 481 158 467Z" fill="url(#woodColumn)" stroke="#e9b065" stroke-width="2"/><path d="M163 461Q225 468 288 461" fill="none" stroke="#ffd990" opacity=".65" stroke-width="2"/></g>
+<!-- lamps for warm ambience -->
+<g><path d="M75 109v106M375 109v106" stroke="#dca865" stroke-width="2"/><path d="M55 218Q75 204 95 218L89 255Q75 266 61 255Z M355 218Q375 204 395 218L389 255Q375 266 361 255Z" fill="#b97930" stroke="#f8d895" stroke-width="2"/><ellipse cx="75" cy="232" rx="34" ry="50" fill="url(#candleGlow)" opacity=".42"/><ellipse cx="375" cy="232" rx="34" ry="50" fill="url(#candleGlow)" opacity=".42"/><path d="M66 220h18l-3 30H69Z M366 220h18l-3 30h-12Z" fill="#ffdd82" opacity=".45"/></g>
+<g opacity=".9"><ellipse cx="127" cy="481" rx="38" ry="17" fill="url(#candleGlow)"/><ellipse cx="324" cy="481" rx="38" ry="17" fill="url(#candleGlow)"/><path d="M125 475q-5 -12 0 -20q5 8 0 20M324 475q-5 -12 0 -20q5 8 0 20" fill="#fff0b4"/></g>
+<!-- depth haze and foreground vignette -->
+<rect width="450" height="800" fill="#100908" opacity=".05"/>
+</svg>
+<div class="scene-dim"></div><div class="scene-shine"></div><div class="motes"></div><div class="frame"></div>
+<div class="demo-tag">BẢN MẪU · CHƯA KẾT NỐI TIKTOK</div>
+<header class="layer stage-head"><div class="logo">🪷</div><div class="headcopy"><div class="headtitle">CHÙA AN TÂM</div><div class="headsub">BÌNH AN TRONG TỪNG KHOẢNH KHẮC</div></div><div class="live-tag">LIVE DEMO</div></header>
+<div class="layer stats"><div class="stat"><i class="dot"></i><strong id="guestCount">25</strong> mẫu</div><div class="stat">🪷 <strong id="flowerCount">0</strong> hoa</div><div class="stat">◷ <strong id="clock">00:00:00</strong></div></div>
+<div class="layer mantra">NAM MÔ A DI ĐÀ PHẬT</div>
+<div class="layer instructions"><h3>🪷 Lời nhắn an yên</h3><p>Gõ “AN” để cùng thiền định khi đã kết nối TikTok.</p><p>Gửi lời chúc tích cực cho mọi người.</p><small>Hiện chỉ đang mô phỏng trên website.</small></div>
+<div class="layer rankboard"><h3>🌼 Đồng hành</h3><ol class="ranklist" id="ranking"></ol><div class="rank-foot">Xếp hạng demo</div></div>
+<div class="layer altar-caption">✦ Giữ tâm an · Nuôi dưỡng điều lành ✦</div>
+<div class="layer wish"><div class="wish-title">Lời chúc bình an</div><div class="wish-by" id="wishBy">🪷 Gửi đến mọi người</div><div class="wish-body" id="wishBody">“Mong tâm sáng, lòng an và mỗi ngày đều có điều để biết ơn.”</div></div>
+<div class="layer rowheading"><span>🧘 Không gian thiền định</span><small id="seatCount">25 nhân vật mẫu</small></div><div class="sitters" id="sitters"></div>
+<div class="layer ticker" id="ticker">🪷 Chào mừng đến với Chùa An Tâm Online</div><div class="fx" id="fx"></div><div class="toast" id="toast" role="status"></div>
 </section>
-<aside class="panel">
-  <h1>Điều khiển bản mẫu</h1>
-  <p>Đây là trang web minh họa giao diện LIVE tương tác dọc 9:16. Các nút bên dưới dùng để thử hiệu ứng, chưa đọc bình luận hoặc quà tặng thật từ TikTok.</p>
-  <div class="panel-card">
-    <h2>THỬ TƯƠNG TÁC NGƯỜI XEM</h2>
-    <div class="field"><label for="username">Tên người tham gia</label><input id="username" value="Khách An Nhiên" maxlength="24" placeholder="Nhập tên người xem" /></div>
-    <div class="buttons"><button class="btn primary" id="joinBtn">🧘 Tham gia thiền</button><button class="btn" id="heartBtn">❤️ Thả tim</button><button class="btn" id="flowerBtn">🪷 Dâng hoa</button><button class="btn" id="bellBtn">🔔 Thỉnh chuông</button></div>
-  </div>
-  <div class="panel-card">
-    <h2>GỬI LỜI CHÚC TRÊN MÀN HÌNH</h2>
-    <div class="field"><label for="wishInput">Nội dung lời chúc</label><textarea id="wishInput" maxlength="160">Mong mọi người có một ngày nhẹ lòng, khỏe mạnh và hạnh phúc.</textarea></div>
-    <div class="buttons"><button class="btn primary wide" id="wishBtn">Hiện lời chúc</button></div>
-  </div>
-  <div class="panel-card">
-    <h2>TRÌNH CHIẾU VÀ THỬ NGHIỆM</h2>
-    <label class="switch"><input type="checkbox" id="autoToggle"/> Tự tạo tương tác mô phỏng</label>
-    <div class="divider"></div>
-    <div class="buttons"><button class="btn" id="resetBtn">↺ Đặt lại demo</button><button class="btn" id="previewBtn">⛶ Mở màn hình LIVE</button></div>
-    <p class="panel-note">Mẹo: Dùng <strong>chế độ màn hình LIVE</strong> để kiểm tra giao diện không có bảng điều khiển khi đưa vào phần mềm phát trực tiếp.</p>
-    <div class="code">Mẫu để thử trên OBS: chua_an_tam_demo.html?live=1</div>
-    <div class="status" id="status" role="status">Sẵn sàng thử nghiệm.</div>
-  </div>
-  <div class="foot">Quan trọng: Toàn bộ sự kiện trong bản mẫu là dữ liệu thử. Kết nối với TikTok LIVE cần một lớp tích hợp sự kiện được cấp phép hoặc dịch vụ tương thích và quyền phát LIVE phù hợp. Không nên gắn quà tặng với lời hứa về phước lành hay kết quả tâm linh.</div>
-</aside>
-</main>
+<aside class="panel"><h1>Điều khiển Chùa An Tâm</h1><p>Bản thiết kế mới: chánh điện gỗ đỏ, tượng Phật vàng trên đài sen và người ngồi thiền. Dữ liệu bên dưới là <strong>mô phỏng để kiểm tra giao diện</strong>, không phải bình luận hay quà tặng TikTok thật.</p>
+<div class="panel-card"><h2>THỬ TƯƠNG TÁC</h2><div class="field"><label for="username">Tên người tham gia (demo)</label><input id="username" maxlength="24" value="Khách An Nhiên" placeholder="Nhập tên" autocomplete="off"></div><div class="controls"><button class="btn primary" id="join">🧘 Tham gia</button><button class="btn" id="heart">❤️ Thả tim</button><button class="btn" id="flower">🪷 Dâng hoa</button><button class="btn" id="bell">🔔 Thỉnh chuông</button></div></div>
+<div class="panel-card"><h2>LỜI CHÚC</h2><div class="field"><label for="wishInput">Nội dung hiển thị</label><textarea id="wishInput" maxlength="160">Chúc mọi người và gia đình luôn bình an, khỏe mạnh và nhiều niềm vui.</textarea></div><div class="controls"><button class="btn primary wide" id="sendWish">Hiện lời chúc</button></div></div>
+<div class="panel-card"><h2>CHẾ ĐỘ LIVE / KIỂM TRA</h2><label class="switch"><input id="automatic" type="checkbox"> Tự chạy tương tác demo</label><div class="divider"></div><div class="controls"><button class="btn" id="reset">↻ Đặt lại</button><button class="btn" id="viewLive">⛶ Mở giao diện LIVE</button></div><div class="status" id="status">Sẵn sàng sử dụng bản mẫu.</div><div class="smallnote">Sau khi cập nhật GitHub, thêm <strong>?live=1</strong> vào cuối địa chỉ để ẩn bảng điều khiển. Không cần cài thêm ứng dụng.</div></div>
+<div class="foot">Source HTML/CSS/SVG/JavaScript độc lập, không dùng thư viện bên ngoài. Để kết nối TikTok thật cần máy chủ / giải pháp truy cập sự kiện LIVE được phép. Không gắn quà tặng với lời hứa về phước lành hoặc kết quả tâm linh.</div></aside></main>
 <script>
 (()=>{'use strict';
- const $=id=>document.getElementById(id);
- const stage=$('stage'),peopleEl=$('people'),rankEl=$('ranking'),wishName=$('wishName'),wishText=$('wishText'),ticker=$('ticker'),fx=$('fx'),toast=$('toast');
- const firstNames=['An Nhiên','Thanh Tâm','Hương Sen','Minh Tịnh','Phúc An','Thiện Ý','Bình Tâm','Diệu Linh','Tâm Phúc','Trúc Mai','Ngọc An','Hoài Phương','Như Ý','Phúc Hòa','Thảo Nhi','Hải Bình','Từ Tâm','Lan Hương','Minh Hiếu','An Lành','Thanh Trúc','Thủy Tiên','Đức An','Bảo Nhi','Kim Ngân'];
- const baseWishes=['Mong tâm luôn an yên, mỗi ngày tìm thấy một điều nhỏ bé đáng biết ơn.','Hãy dành một phút cho hơi thở và cho chính mình. Bình an bắt đầu từ những điều giản dị.','Mong gia đình luôn mạnh khỏe, tình thương và sự thấu hiểu luôn hiện diện.','Chúc một ngày mới thuận hòa, làm việc với tâm sáng và nghỉ ngơi thật trọn vẹn.'];
- let data=[],flowers=0,likes=0,start=Date.now(),autoTimer=null,toastTimer=null,wishCursor=0;
- function seed(){data=firstNames.map((name,i)=>({name,points:Math.max(1,25-i+Math.floor((25-i)/3)),flowers:0}));flowers=0;likes=0;start=Date.now();wishCursor=0;wishName.textContent='🪷 Gửi tới tất cả mọi người';wishText.textContent='“'+baseWishes[0]+'”';ticker.textContent='🪷 Chào mừng đến với Chùa An Tâm Online';render()}
- function cleaned(s){return String(s||'').trim().replace(/\s+/g,' ').slice(0,24)}
- function name(){return cleaned($('username').value)||'Khách An Nhiên'}
- function findUser(n){let u=data.find(x=>x.name.toLowerCase()===n.toLowerCase());if(!u){u={name:n,points:0,flowers:0};data.push(u)}return u}
- function render(){
-   $('onlineCount').textContent=data.length;$('flowersCount').textContent=flowers.toLocaleString('vi-VN');$('guestLine').textContent=`${Math.min(25,data.length)} vị trí đang hiển thị`;
-   rankEl.replaceChildren();[...data].sort((a,b)=>b.points-a.points).slice(0,8).forEach((p,i)=>{let li=document.createElement('li');for(const [cls,t] of [['rank-num',String(i+1)+'.'],['rank-name',p.name],['rank-score',String(p.points)]]){let span=document.createElement('span');span.className=cls;span.textContent=t;li.appendChild(span)}rankEl.appendChild(li)});
-   peopleEl.replaceChildren();data.slice(-25).forEach(p=>{const seat=document.createElement('div');seat.className='seat'+(p.points>45?' highlight':'');seat.title=p.name;
-     const tag=document.createElement('span');tag.className='seat-name';tag.textContent=p.name;
-     const human=document.createElement('span');human.className='human';human.innerHTML='<i class="head"></i><i class="robe"></i><i class="legs"></i>';
-     const base=document.createElement('span');base.className='seat-base';seat.append(tag,human,base);peopleEl.appendChild(seat)
-   });
- }
- function notify(text){toast.textContent=text;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2200)}
- function announce(s){ticker.textContent=s;$('status').textContent=s}
- function petals(n=12){const icons=['🪷','🌸','✨'];for(let i=0;i<n;i++){let p=document.createElement('span');p.className='petal';p.textContent=icons[Math.floor(Math.random()*icons.length)];p.style.setProperty('--left',(4+Math.random()*92)+'%');p.style.setProperty('--size',(12+Math.random()*12)+'px');p.style.setProperty('--dur',(3+Math.random()*3)+'s');p.style.setProperty('--drift',(Math.random()*120-60)+'px');fx.appendChild(p);setTimeout(()=>p.remove(),6500)}}
- function action(kind,user=name(),word=''){
-   const p=findUser(cleaned(user)||'Khách An Nhiên');
-   if(kind==='join'){p.points+=1;announce('🧘 '+p.name+' vừa tham gia không gian thiền định');notify('Chào mừng '+p.name)}
-   if(kind==='heart'){p.points+=1;likes++;announce('❤️ '+p.name+' đã gửi một lời động viên');if(likes%3===0)petals(4)}
-   if(kind==='flower'){p.points+=10;p.flowers++;flowers++;announce('🪷 '+p.name+' vừa dâng một đóa hoa tượng trưng');notify('🪷 Cảm ơn '+p.name);petals(16)}
-   if(kind==='wish'){p.points+=2;wishName.textContent='🪷 Lời chúc từ '+p.name;wishText.textContent='“'+(String(word||'').trim().slice(0,160)||baseWishes[1])+'”';announce('💌 '+p.name+' vừa gửi lời chúc bình an');notify('Lời chúc đã xuất hiện');petals(7)}
-   render();
- }
- function sound(){try{const AudioCtx=window.AudioContext||window.webkitAudioContext;if(!AudioCtx){notify('Trình duyệt không hỗ trợ phát chuông');return}let context=new AudioCtx(),now=context.currentTime;[523.25,783.99,1046.5,1567.98].forEach((hz,i)=>{let o=context.createOscillator(),g=context.createGain();o.type='sine';o.frequency.setValueAtTime(hz,now);g.gain.setValueAtTime(.0001,now);g.gain.exponentialRampToValueAtTime(.11/(i+1),now+.02);g.gain.exponentialRampToValueAtTime(.0001,now+3.5);o.connect(g).connect(context.destination);o.start(now);o.stop(now+3.6)});setTimeout(()=>context.close(),4200)}catch(e){notify('Không thể phát âm thanh trên thiết bị này')}}
- function time(){let sec=Math.floor((Date.now()-start)/1000),hr=Math.floor(sec/3600),min=Math.floor(sec%3600/60),ss=sec%60;$('timer').textContent=[hr,min,ss].map(v=>String(v).padStart(2,'0')).join(':')}
- $('joinBtn').addEventListener('click',()=>action('join'));
- $('heartBtn').addEventListener('click',()=>action('heart'));
- $('flowerBtn').addEventListener('click',()=>action('flower'));
- $('bellBtn').addEventListener('click',()=>{sound();notify('🔔 Chuông an yên');announce('🔔 Tiếng chuông nhắc ta trở về với hiện tại')});
- $('wishBtn').addEventListener('click',()=>action('wish',name(),$('wishInput').value));
- $('resetBtn').addEventListener('click',()=>{seed();notify('Đã đặt lại bản mẫu')});
- $('autoToggle').addEventListener('change',e=>{if(autoTimer){clearInterval(autoTimer);autoTimer=null}if(e.target.checked){autoTimer=setInterval(()=>{let who=firstNames[Math.floor(Math.random()*firstNames.length)],type=Math.random()>.73?'flower':(Math.random()>.6?'join':'heart');action(type,who);},3600);announce('Đã bật tương tác mô phỏng')}else announce('Đã tắt tương tác mô phỏng')});
- $('previewBtn').addEventListener('click',()=>{const u=new URL(location.href);u.searchParams.set('live','1');window.open(u.href,'_blank','noopener')});
- setInterval(time,1000);setInterval(()=>{wishCursor=(wishCursor+1)%baseWishes.length;wishName.textContent='🪷 Gửi tới tất cả mọi người';wishText.textContent='“'+baseWishes[wishCursor]+'”'},22000);
- if(new URLSearchParams(location.search).has('live')){document.body.classList.add('live-mode')}
- seed();time();
+const get=id=>document.getElementById(id), sitters=get('sitters'),rank=get('ranking'),fx=get('fx'),toast=get('toast');
+const sample=['An Nhiên','Thanh Tâm','Hương Sen','Minh Tịnh','Phúc An','Thiện Ý','Bình Tâm','Diệu Linh','Tâm Phúc','Trúc Mai','Ngọc An','Hoài Phương','Như Ý','Phúc Hòa','Thảo Nhi','Hải Bình','Từ Tâm','Lan Hương','Minh Hiếu','An Lành','Thanh Trúc','Thủy Tiên','Đức An','Bảo Nhi','Kim Ngân'];
+const wishes=['Mong tâm sáng, lòng an và mỗi ngày đều có điều để biết ơn.','Giữ một phút tĩnh lặng cho chính mình, để ngày hôm nay nhẹ nhàng hơn.','Mong gia đình luôn mạnh khỏe, biết lắng nghe và thương yêu nhau.','Chúc mọi người có đủ bình an để đón nhận mọi điều bằng tâm sáng.'];
+let users=[],flowers=0,likes=0,started=Date.now(),demoInterval=null,wishIndex=0,toastTimeout=null,rotationTimeout=null;
+function safeName(text){return String(text??'').trim().replace(/\s+/g,' ').slice(0,24)}
+function fromForm(){return safeName(get('username').value)||'Khách An Nhiên'}
+function findUser(name){name=safeName(name)||'Khách An Nhiên';let found=users.find(u=>u.name.toLowerCase()===name.toLowerCase());if(!found){found={name,points:0,flowers:0};users.push(found)}return found}
+function setWish(by,body){clearTimeout(rotationTimeout);get('wishBy').textContent=by;get('wishBody').textContent='“'+String(body).trim().slice(0,160)+'”';rotationTimeout=setTimeout(()=>{wishIndex=(wishIndex+1)%wishes.length;setWish('🪷 Gửi đến mọi người',wishes[wishIndex])},22000)}
+function render(){get('guestCount').textContent=users.length;get('flowerCount').textContent=flowers.toLocaleString('vi-VN');get('seatCount').textContent=Math.min(25,users.length)+' nhân vật mẫu';rank.replaceChildren();[...users].sort((a,b)=>b.points-a.points).slice(0,8).forEach((p,i)=>{const li=document.createElement('li');for(const [cls,value] of [['rankno',(i+1)+'.'],['rankname',p.name],['rankscore',String(p.points)]]){const s=document.createElement('span');s.className=cls;s.textContent=value;li.append(s)}rank.append(li)});
+sitters.replaceChildren();users.slice(-25).forEach(u=>{const s=document.createElement('div');s.className='sitter'+(u.points>45?' highlight':'');s.title=u.name;const label=document.createElement('span');label.className='sitter-name';label.textContent=u.name;const person=document.createElement('span');person.className='person';person.innerHTML='<i class="head"></i><i class="torso"></i><i class="legs"></i><i class="neckline"></i>';const base=document.createElement('span');base.className='cushion';s.append(label,person,base);sitters.append(s)})}
+function notify(value){toast.textContent=value;toast.classList.add('show');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>toast.classList.remove('show'),2300)}
+function say(value){get('ticker').textContent=value;get('status').textContent=value}
+function petals(n=12){const icons=['🪷','🌸','✨'];for(let i=0;i<n;i++){const p=document.createElement('span');p.className='petal';p.textContent=icons[Math.floor(Math.random()*icons.length)];p.style.setProperty('--x',(5+Math.random()*90)+'%');p.style.setProperty('--s',(12+Math.random()*13)+'px');p.style.setProperty('--t',(3+Math.random()*3.4)+'s');p.style.setProperty('--d',(Math.random()*100-50)+'px');fx.append(p);setTimeout(()=>p.remove(),7000)}}
+function action(type,name=fromForm(),message=''){const u=findUser(name);if(type==='join'){u.points+=1;say('🧘 '+u.name+' tham gia thiền (demo)');notify('Chào mừng '+u.name)}if(type==='heart'){u.points+=1;likes++;say('❤️ '+u.name+' đã thả tim (demo)');if(likes%3===0)petals(4)}if(type==='flower'){u.points+=10;u.flowers++;flowers++;say('🪷 '+u.name+' dâng hoa (demo)');notify('🪷 Cảm ơn '+u.name);petals(16)}if(type==='wish'){u.points+=2;setWish('🪷 Lời chúc của '+u.name,message||wishes[0]);say('💌 '+u.name+' gửi lời chúc (demo)');notify('Lời chúc đã xuất hiện');petals(6)}render()}
+function bell(){try{const Context=window.AudioContext||window.webkitAudioContext;if(!Context){notify('Thiết bị không hỗ trợ âm thanh');return}const ctx=new Context(),t=ctx.currentTime;[523.25,784,1046.5,1568].forEach((hz,i)=>{const osc=ctx.createOscillator(),gain=ctx.createGain();osc.type='sine';osc.frequency.setValueAtTime(hz,t);gain.gain.setValueAtTime(.0001,t);gain.gain.exponentialRampToValueAtTime(.13/(i+1),t+.02);gain.gain.exponentialRampToValueAtTime(.0001,t+3.4);osc.connect(gain).connect(ctx.destination);osc.start(t);osc.stop(t+3.5)});setTimeout(()=>ctx.close(),3900)}catch(e){notify('Không thể phát tiếng chuông')}}
+function reset(){users=sample.map((name,i)=>({name,points:Math.max(1,32-i),flowers:0}));flowers=0;likes=0;started=Date.now();wishIndex=0;setWish('🪷 Gửi đến mọi người',wishes[0]);say('🪷 Chào mừng đến với Chùa An Tâm Online');render()}
+function clock(){let s=Math.floor((Date.now()-started)/1000);get('clock').textContent=[Math.floor(s/3600),Math.floor((s%3600)/60),s%60].map(n=>String(n).padStart(2,'0')).join(':')}
+get('join').addEventListener('click',()=>action('join'));get('heart').addEventListener('click',()=>action('heart'));get('flower').addEventListener('click',()=>action('flower'));get('bell').addEventListener('click',()=>{bell();notify('🔔 Tiếng chuông an yên');say('🔔 Hãy dành một phút trở về với hiện tại')});get('sendWish').addEventListener('click',()=>action('wish',fromForm(),get('wishInput').value));get('reset').addEventListener('click',()=>{reset();notify('Đã đặt lại bản mẫu')});
+get('automatic').addEventListener('change',e=>{clearInterval(demoInterval);demoInterval=null;if(e.target.checked){demoInterval=setInterval(()=>{const who=sample[Math.floor(Math.random()*sample.length)],type=Math.random()>.7?'flower':(Math.random()>.55?'join':'heart');action(type,who)},3700);say('Đang chạy hiệu ứng mô phỏng')}else say('Đã dừng mô phỏng')});
+get('viewLive').addEventListener('click',()=>{const url=new URL(location.href);url.searchParams.set('live','1');location.href=url.href});
+if(new URLSearchParams(location.search).get('live')==='1')document.body.classList.add('live-mode');
+reset();clock();setInterval(clock,1000);
 })();
 </script>
-</body>
-</html>
+</body></html>
